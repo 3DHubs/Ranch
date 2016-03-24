@@ -1,0 +1,4872 @@
+{
+  "details": {
+    "details": {
+      "locality_name_type": "city",
+      "fmt": "%N%n%O%n%A%n%C",
+      "sublocality_name_type": "suburb",
+      "require": "AC",
+      "id": "data/ZZ",
+      "upper": "C",
+      "state_name_type": "province",
+      "zip_name_type": "postal"
+    },
+    "url": "/address/data/ZZ"
+  },
+  "subs": {
+    "NL": {
+      "details": {
+        "name": "NETHERLANDS",
+        "key": "NL",
+        "zipex": "1234 AB,2490 AA",
+        "fmt": "%O%n%N%n%A%n%Z %C",
+        "id": "data/NL",
+        "require": "ACZ",
+        "posturl": "http://www.postnl.nl/voorthuis/",
+        "zip": "\\d{4} ?[A-Z]{2}"
+      },
+      "url": "/address/data/NL"
+    },
+    "CA": {
+      "details": {
+        "lang": "en",
+        "fmt": "%N%n%O%n%A%n%C %S %Z",
+        "sub_names": "Alberta~British Columbia~Manitoba~New Brunswick~Newfoundland and Labrador~Northwest Territories~Nova Scotia~Nunavut~Ontario~Prince Edward Island~Quebec~Saskatchewan~Yukon",
+        "zipex": "H3Z 2Y7,V8X 3X4,T0L 1K0,T0H 1A0,K1A 0B1",
+        "id": "data/CA",
+        "key": "CA",
+        "name": "CANADA",
+        "languages": "en~fr",
+        "sub_zips": "T~V~R~E~A~X0E|X0G|X1A~B~X0A|X0B|X0C~K|L|M|N|P~C~G|H|J|K1A~S|R8A~Y",
+        "sub_keys": "AB~BC~MB~NB~NL~NT~NS~NU~ON~PE~QC~SK~YT",
+        "upper": "ACNOSZ",
+        "require": "ACSZ",
+        "posturl": "http://www.canadapost.ca/cpotools/apps/fpc/personal/findByCity?execution=e2s1",
+        "zip": "[ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJ-NPRSTV-Z] ?\\d[ABCEGHJ-NPRSTV-Z]\\d"
+      },
+      "url": "/address/data/CA",
+      "subs": {
+        "NT": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/NT",
+            "name": "Northwest Territories",
+            "zip": "X0E|X0G|X1A",
+            "key": "NT"
+          },
+          "url": "/address/data/CA/NT"
+        },
+        "BC--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/BC--fr",
+            "name": "Colombie-Britannique",
+            "zip": "V",
+            "key": "BC"
+          },
+          "url": "/address/data/CA/BC--fr"
+        },
+        "AB": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/AB",
+            "name": "Alberta",
+            "zip": "T",
+            "key": "AB"
+          },
+          "url": "/address/data/CA/AB"
+        },
+        "YT--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/YT--fr",
+            "name": "Yukon",
+            "zip": "Y",
+            "key": "YT"
+          },
+          "url": "/address/data/CA/YT--fr"
+        },
+        "NB--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/NB--fr",
+            "name": "Nouveau-Brunswick",
+            "zip": "E",
+            "key": "NB"
+          },
+          "url": "/address/data/CA/NB--fr"
+        },
+        "NL": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/NL",
+            "name": "Newfoundland and Labrador",
+            "zip": "A",
+            "key": "NL"
+          },
+          "url": "/address/data/CA/NL"
+        },
+        "YT": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/YT",
+            "name": "Yukon",
+            "zip": "Y",
+            "key": "YT"
+          },
+          "url": "/address/data/CA/YT"
+        },
+        "PE": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/PE",
+            "name": "Prince Edward Island",
+            "zip": "C",
+            "key": "PE"
+          },
+          "url": "/address/data/CA/PE"
+        },
+        "NB": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/NB",
+            "name": "New Brunswick",
+            "zip": "E",
+            "key": "NB"
+          },
+          "url": "/address/data/CA/NB"
+        },
+        "MB--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/MB--fr",
+            "name": "Manitoba",
+            "zip": "R",
+            "key": "MB"
+          },
+          "url": "/address/data/CA/MB--fr"
+        },
+        "NS--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/NS--fr",
+            "name": "Nouvelle-Ecosse",
+            "zip": "B",
+            "key": "NS"
+          },
+          "url": "/address/data/CA/NS--fr"
+        },
+        "ON--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/ON--fr",
+            "name": "Ontario",
+            "zip": "K|L|M|N|P",
+            "key": "ON"
+          },
+          "url": "/address/data/CA/ON--fr"
+        },
+        "NU": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/NU",
+            "name": "Nunavut",
+            "zip": "X0A|X0B|X0C",
+            "key": "NU"
+          },
+          "url": "/address/data/CA/NU"
+        },
+        "QC": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/QC",
+            "name": "Quebec",
+            "zip": "G|H|J|K1A",
+            "key": "QC"
+          },
+          "url": "/address/data/CA/QC"
+        },
+        "SK--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/SK--fr",
+            "name": "Saskatchewan",
+            "zip": "S|R8A",
+            "key": "SK"
+          },
+          "url": "/address/data/CA/SK--fr"
+        },
+        "SK": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/SK",
+            "name": "Saskatchewan",
+            "zip": "S|R8A",
+            "key": "SK"
+          },
+          "url": "/address/data/CA/SK"
+        },
+        "NS": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/NS",
+            "name": "Nova Scotia",
+            "zip": "B",
+            "key": "NS"
+          },
+          "url": "/address/data/CA/NS"
+        },
+        "MB": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/MB",
+            "name": "Manitoba",
+            "zip": "R",
+            "key": "MB"
+          },
+          "url": "/address/data/CA/MB"
+        },
+        "PE--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/PE--fr",
+            "name": "Ile-du-Prince-Edouard",
+            "zip": "C",
+            "key": "PE"
+          },
+          "url": "/address/data/CA/PE--fr"
+        },
+        "QC--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/QC--fr",
+            "name": "Québec",
+            "zip": "G|H|J|K1A",
+            "key": "QC"
+          },
+          "url": "/address/data/CA/QC--fr"
+        },
+        "NU--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/NU--fr",
+            "name": "Nunavut",
+            "zip": "X0A|X0B|X0C",
+            "key": "NU"
+          },
+          "url": "/address/data/CA/NU--fr"
+        },
+        "AB--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/AB--fr",
+            "name": "Alberta",
+            "zip": "T",
+            "key": "AB"
+          },
+          "url": "/address/data/CA/AB--fr"
+        },
+        "BC": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/BC",
+            "name": "British Columbia",
+            "zip": "V",
+            "key": "BC"
+          },
+          "url": "/address/data/CA/BC"
+        },
+        "ON": {
+          "details": {
+            "lang": "en",
+            "id": "data/CA/ON",
+            "name": "Ontario",
+            "zip": "K|L|M|N|P",
+            "key": "ON"
+          },
+          "url": "/address/data/CA/ON"
+        },
+        "NT--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/NT--fr",
+            "name": "Territoires du Nord-Ouest",
+            "zip": "X0E|X0G|X1A",
+            "key": "NT"
+          },
+          "url": "/address/data/CA/NT--fr"
+        },
+        "NL--fr": {
+          "details": {
+            "lang": "fr",
+            "id": "data/CA/NL--fr",
+            "name": "Terre-Neuve-et-Labrador",
+            "zip": "A",
+            "key": "NL"
+          },
+          "url": "/address/data/CA/NL--fr"
+        }
+      }
+    },
+    "CN": {
+      "details": {
+        "sub_mores": "true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true~true",
+        "lang": "zh",
+        "fmt": "%Z%n%S%C%D%n%A%n%O%n%N",
+        "sub_names": "安徽省~澳门~北京市~重庆市~福建省~甘肃省~广东省~广西~贵州省~海南省~河北省~河南省~黑龙江省~湖北省~湖南省~吉林省~江苏省~江西省~辽宁省~内蒙古~宁夏~青海省~山东省~山西省~陕西省~上海市~四川省~台湾~天津市~西藏~香港~新疆~云南省~浙江省",
+        "zipex": "266033,317204,100096,100808",
+        "sublocality_name_type": "district",
+        "key": "CN",
+        "lfmt": "%N%n%O%n%A%n%D%n%C%n%S, %Z",
+        "languages": "zh",
+        "upper": "S",
+        "id": "data/CN",
+        "name": "CHINA",
+        "sub_keys": "安徽省~澳门~北京市~重庆市~福建省~甘肃省~广东省~广西壮族自治区~贵州省~海南省~河北省~河南省~黑龙江省~湖北省~湖南省~吉林省~江苏省~江西省~辽宁省~内蒙古自治区~宁夏回族自治区~青海省~山东省~山西省~陕西省~上海市~四川省~台湾~天津市~西藏自治区~香港~新疆维吾尔自治区~云南省~浙江省",
+        "sub_lnames": "Anhui Sheng~Macau~Beijing Shi~Chongqing Shi~Fujian Sheng~Gansu Sheng~Guangdong Sheng~Guangxi Zhuangzuzizhiqu~Guizhou Sheng~Hainan Sheng~Hebei Sheng~Henan Sheng~Heilongjiang Sheng~Hubei Sheng~Hunan Sheng~Jilin Sheng~Jiangsu Sheng~Jiangxi Sheng~Liaoning Sheng~Neimenggu Zizhiqu~Ningxia Huizuzizhiqu~Qinghai Sheng~Shandong Sheng~Shanxi Sheng~Shaanxi Sheng~Shanghai Shi~Sichuan Sheng~Taiwan~Tianjin Shi~Xizang Zizhiqu~Hong Kong~Xinjiang Weiwuerzizhiqu~Yunnan Sheng~Zhejiang Sheng",
+        "sub_xzips": "~999078~~~~~~~~~~~~~~~~~~~~~~~~~~\\d{3}(\\d{2})?~~~999077~~~",
+        "require": "ACSZ",
+        "sub_isoids": "34~92~11~50~35~62~44~45~52~46~13~41~23~42~43~22~32~36~21~15~64~63~37~14~61~31~51~71~12~54~91~65~53~33",
+        "zip": "\\d{6}",
+        "posturl": "http://www.cpdc.com.cn/postcdQueryAction.do?reqCode=gotoQueryPostAddr",
+        "sub_xrequires": "~A~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ACS~~~"
+      },
+      "url": "/address/data/CN",
+      "subs": {
+        "宁夏回族自治区": {
+          "details": {
+            "sub_mores": "true~true~true~true~true",
+            "lang": "zh",
+            "name": "宁夏",
+            "sub_keys": "固原市~石嘴山市~吴忠市~银川市~中卫市",
+            "sub_lnames": "Guyuan Shi~Shizuishan Shi~Wuzhong Shi~Yinchuan Shi~Zhongwei Shi",
+            "sub_zipexs": "756000~753000~751100~750004~751700",
+            "id": "data/CN/宁夏回族自治区",
+            "sub_names": "固原市~石嘴山市~吴忠市~银川市~中卫市",
+            "key": "宁夏回族自治区",
+            "isoid": "64",
+            "lname": "Ningxia Huizuzizhiqu"
+          },
+          "url": "/address/data/CN/宁夏回族自治区",
+          "subs": {
+            "银川市": {
+              "details": {
+                "lang": "zh",
+                "name": "银川市",
+                "sub_keys": "贺兰县~金凤区~灵武市~西夏区~兴庆区~永宁县",
+                "sub_lnames": "Helan Xian~Jinfeng Qu~Lingwu Shi~Xixia Qu~Xingqing Qu~Yongning Xian",
+                "zipex": "750004",
+                "id": "data/CN/宁夏回族自治区/银川市",
+                "sub_names": "贺兰县~金凤区~灵武市~西夏区~兴庆区~永宁县",
+                "key": "银川市",
+                "lname": "Yinchuan Shi",
+                "sub_zipexs": "750200~750011~750400~750027~750001~750100"
+              },
+              "url": "/address/data/CN/宁夏回族自治区/银川市",
+              "subs": {
+                "兴庆区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "兴庆区",
+                    "zipex": "750001",
+                    "id": "data/CN/宁夏回族自治区/银川市/兴庆区",
+                    "key": "兴庆区",
+                    "lname": "Xingqing Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/兴庆区"
+                },
+                "永宁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "永宁县",
+                    "zipex": "750100",
+                    "id": "data/CN/宁夏回族自治区/银川市/永宁县",
+                    "key": "永宁县",
+                    "lname": "Yongning Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/永宁县"
+                },
+                "灵武市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "灵武市",
+                    "zipex": "750400",
+                    "id": "data/CN/宁夏回族自治区/银川市/灵武市",
+                    "key": "灵武市",
+                    "lname": "Lingwu Shi"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/灵武市"
+                },
+                "西夏区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "西夏区",
+                    "zipex": "750027",
+                    "id": "data/CN/宁夏回族自治区/银川市/西夏区",
+                    "key": "西夏区",
+                    "lname": "Xixia Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/西夏区"
+                },
+                "贺兰县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "贺兰县",
+                    "zipex": "750200",
+                    "id": "data/CN/宁夏回族自治区/银川市/贺兰县",
+                    "key": "贺兰县",
+                    "lname": "Helan Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/贺兰县"
+                },
+                "金凤区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "金凤区",
+                    "zipex": "750011",
+                    "id": "data/CN/宁夏回族自治区/银川市/金凤区",
+                    "key": "金凤区",
+                    "lname": "Jinfeng Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/银川市/金凤区"
+                }
+              }
+            },
+            "中卫市": {
+              "details": {
+                "lang": "zh",
+                "name": "中卫市",
+                "sub_keys": "海原县~沙坡头区~中宁县",
+                "sub_lnames": "Haiyuan Xian~Shapotou Qu~Zhongning Xian",
+                "zipex": "751700",
+                "id": "data/CN/宁夏回族自治区/中卫市",
+                "sub_names": "海原县~沙坡头区~中宁县",
+                "key": "中卫市",
+                "lname": "Zhongwei Shi",
+                "sub_zipexs": "751800~751700~751200"
+              },
+              "url": "/address/data/CN/宁夏回族自治区/中卫市",
+              "subs": {
+                "中宁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "中宁县",
+                    "zipex": "751200",
+                    "id": "data/CN/宁夏回族自治区/中卫市/中宁县",
+                    "key": "中宁县",
+                    "lname": "Zhongning Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/中卫市/中宁县"
+                },
+                "海原县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "海原县",
+                    "zipex": "751800",
+                    "id": "data/CN/宁夏回族自治区/中卫市/海原县",
+                    "key": "海原县",
+                    "lname": "Haiyuan Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/中卫市/海原县"
+                },
+                "沙坡头区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沙坡头区",
+                    "zipex": "751700",
+                    "id": "data/CN/宁夏回族自治区/中卫市/沙坡头区",
+                    "key": "沙坡头区",
+                    "lname": "Shapotou Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/中卫市/沙坡头区"
+                }
+              }
+            },
+            "固原市": {
+              "details": {
+                "lang": "zh",
+                "name": "固原市",
+                "sub_keys": "泾源县~隆德县~彭阳县~西吉县~原州区",
+                "sub_lnames": "Jingyuan Xian~Longde Xian~Pengyang Xian~Xiji Xian~Yuanzhou Qu",
+                "zipex": "756000",
+                "id": "data/CN/宁夏回族自治区/固原市",
+                "sub_names": "泾源县~隆德县~彭阳县~西吉县~原州区",
+                "key": "固原市",
+                "lname": "Guyuan Shi",
+                "sub_zipexs": "756400~756300~756500~756200~756000"
+              },
+              "url": "/address/data/CN/宁夏回族自治区/固原市",
+              "subs": {
+                "原州区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "原州区",
+                    "zipex": "756000",
+                    "id": "data/CN/宁夏回族自治区/固原市/原州区",
+                    "key": "原州区",
+                    "lname": "Yuanzhou Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/固原市/原州区"
+                },
+                "彭阳县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "彭阳县",
+                    "zipex": "756500",
+                    "id": "data/CN/宁夏回族自治区/固原市/彭阳县",
+                    "key": "彭阳县",
+                    "lname": "Pengyang Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/固原市/彭阳县"
+                },
+                "隆德县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "隆德县",
+                    "zipex": "756300",
+                    "id": "data/CN/宁夏回族自治区/固原市/隆德县",
+                    "key": "隆德县",
+                    "lname": "Longde Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/固原市/隆德县"
+                },
+                "泾源县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "泾源县",
+                    "zipex": "756400",
+                    "id": "data/CN/宁夏回族自治区/固原市/泾源县",
+                    "key": "泾源县",
+                    "lname": "Jingyuan Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/固原市/泾源县"
+                },
+                "西吉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "西吉县",
+                    "zipex": "756200",
+                    "id": "data/CN/宁夏回族自治区/固原市/西吉县",
+                    "key": "西吉县",
+                    "lname": "Xiji Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/固原市/西吉县"
+                }
+              }
+            },
+            "石嘴山市": {
+              "details": {
+                "lang": "zh",
+                "name": "石嘴山市",
+                "sub_keys": "大武口区~惠农区~平罗县",
+                "sub_lnames": "Dawukou Qu~Huinong Qu~Pingluo Xian",
+                "zipex": "753000",
+                "id": "data/CN/宁夏回族自治区/石嘴山市",
+                "sub_names": "大武口区~惠农区~平罗县",
+                "key": "石嘴山市",
+                "lname": "Shizuishan Shi",
+                "sub_zipexs": "753000~753200~753400"
+              },
+              "url": "/address/data/CN/宁夏回族自治区/石嘴山市",
+              "subs": {
+                "惠农区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "惠农区",
+                    "zipex": "753200",
+                    "id": "data/CN/宁夏回族自治区/石嘴山市/惠农区",
+                    "key": "惠农区",
+                    "lname": "Huinong Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/石嘴山市/惠农区"
+                },
+                "平罗县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "平罗县",
+                    "zipex": "753400",
+                    "id": "data/CN/宁夏回族自治区/石嘴山市/平罗县",
+                    "key": "平罗县",
+                    "lname": "Pingluo Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/石嘴山市/平罗县"
+                },
+                "大武口区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "大武口区",
+                    "zipex": "753000",
+                    "id": "data/CN/宁夏回族自治区/石嘴山市/大武口区",
+                    "key": "大武口区",
+                    "lname": "Dawukou Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/石嘴山市/大武口区"
+                }
+              }
+            },
+            "吴忠市": {
+              "details": {
+                "lang": "zh",
+                "name": "吴忠市",
+                "sub_keys": "利通区~青铜峡市~同心县~盐池县",
+                "sub_lnames": "Litong Qu~Qingtongxia Shi~Tongxin Xian~Yanchi Xian",
+                "zipex": "751100",
+                "id": "data/CN/宁夏回族自治区/吴忠市",
+                "sub_names": "利通区~青铜峡市~同心县~盐池县",
+                "key": "吴忠市",
+                "lname": "Wuzhong Shi",
+                "sub_zipexs": "751100~751600~751300~751500"
+              },
+              "url": "/address/data/CN/宁夏回族自治区/吴忠市",
+              "subs": {
+                "利通区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "利通区",
+                    "zipex": "751100",
+                    "id": "data/CN/宁夏回族自治区/吴忠市/利通区",
+                    "key": "利通区",
+                    "lname": "Litong Qu"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/吴忠市/利通区"
+                },
+                "同心县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "同心县",
+                    "zipex": "751300",
+                    "id": "data/CN/宁夏回族自治区/吴忠市/同心县",
+                    "key": "同心县",
+                    "lname": "Tongxin Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/吴忠市/同心县"
+                },
+                "盐池县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "盐池县",
+                    "zipex": "751500",
+                    "id": "data/CN/宁夏回族自治区/吴忠市/盐池县",
+                    "key": "盐池县",
+                    "lname": "Yanchi Xian"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/吴忠市/盐池县"
+                },
+                "青铜峡市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "青铜峡市",
+                    "zipex": "751600",
+                    "id": "data/CN/宁夏回族自治区/吴忠市/青铜峡市",
+                    "key": "青铜峡市",
+                    "lname": "Qingtongxia Shi"
+                  },
+                  "url": "/address/data/CN/宁夏回族自治区/吴忠市/青铜峡市"
+                }
+              }
+            }
+          }
+        },
+        "新疆维吾尔自治区": {
+          "details": {
+            "sub_mores": "true~false~true~true~true~true~true~true~true~true~true~false~true~false~true~true~false~true",
+            "lang": "zh",
+            "sub_names": "阿克苏地区~阿拉尔市~阿勒泰地区~巴音郭楞州~博尔塔拉州~昌吉州~哈密地区~和田地区~喀什地区~克拉玛依市~克孜勒苏州~石河子市~塔城地区~图木舒克市~吐鲁番地区~乌鲁木齐市~五家渠市~伊犁州",
+            "id": "data/CN/新疆维吾尔自治区",
+            "key": "新疆维吾尔自治区",
+            "sub_lfnames": "~~~Bayingolin Mongol Zizhizhou~Bortala Mongol Zizhizhou~Changji Huizu Zizhizhou~Hami (Kumul) Diqu~~Kashi (Kaxgar) Diqu~~Kizilsu Kirgiz Zizhizhou~~Tacheng (Qoqek) Diqu~~~~~Ili Kazak Zizhizhou",
+            "lname": "Xinjiang Weiwuerzizhiqu",
+            "name": "新疆",
+            "sub_keys": "阿克苏地区~阿拉尔市~阿勒泰地区~巴音郭楞蒙古自治州~博尔塔拉蒙古自治州~昌吉回族自治州~哈密地区~和田地区~喀什地区~克拉玛依市~克孜勒苏柯尔克孜自治州~石河子市~塔城地区~图木舒克市~吐鲁番地区~乌鲁木齐市~五家渠市~伊犁哈萨克自治州",
+            "sub_lnames": "Aksu Diqu~Ala'er Shi~Altay Shi~Bayingolin Zhou~Bortala Zhou~Changji Zhou~Hami Diqu~Hotan Diqu~Kashi Diqu~Karamay Shi~Kizilsu Zhou~Shihezi Shi~Tacheng Diqu~Tumushuke Shi~Turpan Diqu~Ürümqi Shi~Wujiaqu Shi~Ili Zhou",
+            "isoid": "65",
+            "sub_zipexs": "843000~843300~836500~841000~833400~831100~839000~848000~844000~834000~845350~832001~834700~843806~838000~830002~831300~835000"
+          },
+          "url": "/address/data/CN/新疆维吾尔自治区",
+          "subs": {
+            "哈密地区": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "巴里坤县~哈密市~伊吾县",
+                "zipex": "839000",
+                "id": "data/CN/新疆维吾尔自治区/哈密地区",
+                "key": "哈密地区",
+                "sub_lfnames": "Barkol Kazak Zizhixian~Hami (Kumul) Shi~Yiwu (Aratürük) Xian",
+                "lname": "Hami Diqu",
+                "lfname": "Hami (Kumul) Diqu",
+                "name": "哈密地区",
+                "sub_keys": "巴里坤哈萨克自治县~哈密市~伊吾县",
+                "sub_lnames": "Barkol Xian~Hami Shi~Yiwu Xian",
+                "sub_zipexs": "839200~839000~839300"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/哈密地区",
+              "subs": {
+                "巴里坤哈萨克自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "巴里坤县",
+                    "zipex": "839200",
+                    "id": "data/CN/新疆维吾尔自治区/哈密地区/巴里坤哈萨克自治县",
+                    "key": "巴里坤哈萨克自治县",
+                    "lname": "Barkol Xian",
+                    "lfname": "Barkol Kazak Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/哈密地区/巴里坤哈萨克自治县"
+                },
+                "伊吾县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "伊吾县",
+                    "zipex": "839300",
+                    "id": "data/CN/新疆维吾尔自治区/哈密地区/伊吾县",
+                    "key": "伊吾县",
+                    "lname": "Yiwu Xian",
+                    "lfname": "Yiwu (Aratürük) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/哈密地区/伊吾县"
+                },
+                "哈密市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "哈密市",
+                    "zipex": "839000",
+                    "id": "data/CN/新疆维吾尔自治区/哈密地区/哈密市",
+                    "key": "哈密市",
+                    "lname": "Hami Shi",
+                    "lfname": "Hami (Kumul) Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/哈密地区/哈密市"
+                }
+              }
+            },
+            "巴音郭楞蒙古自治州": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "博湖县~和静县~和硕县~库尔勒市~轮台县~且末县~若羌县~尉犁县~焉耆县",
+                "zipex": "841000",
+                "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州",
+                "key": "巴音郭楞蒙古自治州",
+                "sub_lfnames": "Bohu (Bagrax) Xian~~~~Luntai (Bügür) Xian~Qiemo (Qarqan) Xian~Ruoqiang (Qakilik) Xian~Yuli (Lopnur) Xian~Yanqi Huizu Zizhixian",
+                "lname": "Bayingolin Zhou",
+                "lfname": "Bayingolin Mongol Zizhizhou",
+                "name": "巴音郭楞州",
+                "sub_keys": "博湖县~和静县~和硕县~库尔勒市~轮台县~且末县~若羌县~尉犁县~焉耆回族自治县",
+                "sub_lnames": "Bohu Xian~Hejing Xian~Hoxud Xian~Korla Shi~Luntai Xian~Qiemo Xian~Ruoqiang Xian~Yuli Xian~Yanqi Xian",
+                "sub_zipexs": "841400~841300~841200~841000~841600~841900~841800~841500~841100"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州",
+              "subs": {
+                "且末县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "且末县",
+                    "zipex": "841900",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/且末县",
+                    "key": "且末县",
+                    "lname": "Qiemo Xian",
+                    "lfname": "Qiemo (Qarqan) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/且末县"
+                },
+                "焉耆回族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "焉耆县",
+                    "zipex": "841100",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/焉耆回族自治县",
+                    "key": "焉耆回族自治县",
+                    "lname": "Yanqi Xian",
+                    "lfname": "Yanqi Huizu Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/焉耆回族自治县"
+                },
+                "和静县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "和静县",
+                    "zipex": "841300",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/和静县",
+                    "key": "和静县",
+                    "lname": "Hejing Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/和静县"
+                },
+                "若羌县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "若羌县",
+                    "zipex": "841800",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/若羌县",
+                    "key": "若羌县",
+                    "lname": "Ruoqiang Xian",
+                    "lfname": "Ruoqiang (Qakilik) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/若羌县"
+                },
+                "库尔勒市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "库尔勒市",
+                    "zipex": "841000",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/库尔勒市",
+                    "key": "库尔勒市",
+                    "lname": "Korla Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/库尔勒市"
+                },
+                "轮台县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "轮台县",
+                    "zipex": "841600",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/轮台县",
+                    "key": "轮台县",
+                    "lname": "Luntai Xian",
+                    "lfname": "Luntai (Bügür) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/轮台县"
+                },
+                "和硕县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "和硕县",
+                    "zipex": "841200",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/和硕县",
+                    "key": "和硕县",
+                    "lname": "Hoxud Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/和硕县"
+                },
+                "博湖县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "博湖县",
+                    "zipex": "841400",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/博湖县",
+                    "key": "博湖县",
+                    "lname": "Bohu Xian",
+                    "lfname": "Bohu (Bagrax) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/博湖县"
+                },
+                "尉犁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "尉犁县",
+                    "zipex": "841500",
+                    "id": "data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/尉犁县",
+                    "key": "尉犁县",
+                    "lname": "Yuli Xian",
+                    "lfname": "Yuli (Lopnur) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/巴音郭楞蒙古自治州/尉犁县"
+                }
+              }
+            },
+            "博尔塔拉蒙古自治州": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "博乐市~精河县~温泉县",
+                "zipex": "833400",
+                "id": "data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州",
+                "key": "博尔塔拉蒙古自治州",
+                "sub_lfnames": "Bole (Bortala) Shi~Jinghe (Jing) Xian~Wenquan (Arixang) Xian",
+                "lname": "Bortala Zhou",
+                "lfname": "Bortala Mongol Zizhizhou",
+                "name": "博尔塔拉州",
+                "sub_keys": "博乐市~精河县~温泉县",
+                "sub_lnames": "Bole Shi~Jinghe Xian~Wenquan Xian",
+                "sub_zipexs": "833400~833300~833500"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州",
+              "subs": {
+                "精河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "精河县",
+                    "zipex": "833300",
+                    "id": "data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/精河县",
+                    "key": "精河县",
+                    "lname": "Jinghe Xian",
+                    "lfname": "Jinghe (Jing) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/精河县"
+                },
+                "博乐市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "博乐市",
+                    "zipex": "833400",
+                    "id": "data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/博乐市",
+                    "key": "博乐市",
+                    "lname": "Bole Shi",
+                    "lfname": "Bole (Bortala) Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/博乐市"
+                },
+                "温泉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "温泉县",
+                    "zipex": "833500",
+                    "id": "data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/温泉县",
+                    "key": "温泉县",
+                    "lname": "Wenquan Xian",
+                    "lfname": "Wenquan (Arixang) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/博尔塔拉蒙古自治州/温泉县"
+                }
+              }
+            },
+            "伊犁哈萨克自治州": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "察布查尔县~巩留县~霍城县~奎屯市~尼勒克县~特克斯县~新源县~伊宁市~伊宁县~昭苏县",
+                "zipex": "835000",
+                "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州",
+                "key": "伊犁哈萨克自治州",
+                "sub_lfnames": "Qapqal Xibe Zizhixian~Gongliu (Tokkuztara) Xian~~~~~Xinyuan (Künes) Xian~Yining (Gulja) Shi~Yining (Gulja) Xian~Zhaosu (Mongolküre) Xian",
+                "lname": "Ili Zhou",
+                "lfname": "Ili Kazak Zizhizhou",
+                "name": "伊犁州",
+                "sub_keys": "察布查尔锡伯自治县~巩留县~霍城县~奎屯市~尼勒克县~特克斯县~新源县~伊宁市~伊宁县~昭苏县",
+                "sub_lnames": "Qapqal Xian~Gongliu Xian~Huocheng Xian~Kuytun Shi~Nilka Xian~Tekes Xian~Xinyuan Xian~Yining Shi~Yining Xian~Zhaosu Xian",
+                "sub_zipexs": "835300~835400~835200~833200~835700~835500~835800~835000~835100~835600"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州",
+              "subs": {
+                "巩留县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "巩留县",
+                    "zipex": "835400",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/巩留县",
+                    "key": "巩留县",
+                    "lname": "Gongliu Xian",
+                    "lfname": "Gongliu (Tokkuztara) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/巩留县"
+                },
+                "伊宁市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "伊宁市",
+                    "zipex": "835000",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/伊宁市",
+                    "key": "伊宁市",
+                    "lname": "Yining Shi",
+                    "lfname": "Yining (Gulja) Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/伊宁市"
+                },
+                "伊宁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "伊宁县",
+                    "zipex": "835100",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/伊宁县",
+                    "key": "伊宁县",
+                    "lname": "Yining Xian",
+                    "lfname": "Yining (Gulja) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/伊宁县"
+                },
+                "新源县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新源县",
+                    "zipex": "835800",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/新源县",
+                    "key": "新源县",
+                    "lname": "Xinyuan Xian",
+                    "lfname": "Xinyuan (Künes) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/新源县"
+                },
+                "尼勒克县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "尼勒克县",
+                    "zipex": "835700",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/尼勒克县",
+                    "key": "尼勒克县",
+                    "lname": "Nilka Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/尼勒克县"
+                },
+                "特克斯县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "特克斯县",
+                    "zipex": "835500",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/特克斯县",
+                    "key": "特克斯县",
+                    "lname": "Tekes Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/特克斯县"
+                },
+                "奎屯市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "奎屯市",
+                    "zipex": "833200",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/奎屯市",
+                    "key": "奎屯市",
+                    "lname": "Kuytun Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/奎屯市"
+                },
+                "察布查尔锡伯自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "察布查尔县",
+                    "zipex": "835300",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/察布查尔锡伯自治县",
+                    "key": "察布查尔锡伯自治县",
+                    "lname": "Qapqal Xian",
+                    "lfname": "Qapqal Xibe Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/察布查尔锡伯自治县"
+                },
+                "昭苏县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "昭苏县",
+                    "zipex": "835600",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/昭苏县",
+                    "key": "昭苏县",
+                    "lname": "Zhaosu Xian",
+                    "lfname": "Zhaosu (Mongolküre) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/昭苏县"
+                },
+                "霍城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "霍城县",
+                    "zipex": "835200",
+                    "id": "data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/霍城县",
+                    "key": "霍城县",
+                    "lname": "Huocheng Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/伊犁哈萨克自治州/霍城县"
+                }
+              }
+            },
+            "阿克苏地区": {
+              "details": {
+                "lang": "zh",
+                "name": "阿克苏地区",
+                "sub_keys": "阿克苏市~阿瓦提县~拜城县~柯坪县~库车县~沙雅县~温宿县~乌什县~新和县",
+                "sub_lnames": "Aksu Shi~Awat Xian~Baicheng Xian~Kalpin Xian~Kuqa Xian~Xayar Xian~Wensu Xian~Wushi Xian~Xinhe Xian",
+                "zipex": "843000",
+                "id": "data/CN/新疆维吾尔自治区/阿克苏地区",
+                "sub_names": "阿克苏市~阿瓦提县~拜城县~柯坪县~库车县~沙雅县~温宿县~乌什县~新和县",
+                "key": "阿克苏地区",
+                "sub_lfnames": "~~Baicheng (Bay) Xian~~~~~Wushi (Uqturpan) Xian~Xinhe (Toksu) Xian",
+                "lname": "Aksu Diqu",
+                "sub_zipexs": "843000~843200~842300~843600~842000~842200~843100~843400~842100"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区",
+              "subs": {
+                "阿克苏市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿克苏市",
+                    "zipex": "843000",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/阿克苏市",
+                    "key": "阿克苏市",
+                    "lname": "Aksu Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/阿克苏市"
+                },
+                "拜城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "拜城县",
+                    "zipex": "842300",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/拜城县",
+                    "key": "拜城县",
+                    "lname": "Baicheng Xian",
+                    "lfname": "Baicheng (Bay) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/拜城县"
+                },
+                "乌什县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乌什县",
+                    "zipex": "843400",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/乌什县",
+                    "key": "乌什县",
+                    "lname": "Wushi Xian",
+                    "lfname": "Wushi (Uqturpan) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/乌什县"
+                },
+                "阿瓦提县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿瓦提县",
+                    "zipex": "843200",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/阿瓦提县",
+                    "key": "阿瓦提县",
+                    "lname": "Awat Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/阿瓦提县"
+                },
+                "库车县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "库车县",
+                    "zipex": "842000",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/库车县",
+                    "key": "库车县",
+                    "lname": "Kuqa Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/库车县"
+                },
+                "柯坪县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "柯坪县",
+                    "zipex": "843600",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/柯坪县",
+                    "key": "柯坪县",
+                    "lname": "Kalpin Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/柯坪县"
+                },
+                "沙雅县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沙雅县",
+                    "zipex": "842200",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/沙雅县",
+                    "key": "沙雅县",
+                    "lname": "Xayar Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/沙雅县"
+                },
+                "新和县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新和县",
+                    "zipex": "842100",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/新和县",
+                    "key": "新和县",
+                    "lname": "Xinhe Xian",
+                    "lfname": "Xinhe (Toksu) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/新和县"
+                },
+                "温宿县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "温宿县",
+                    "zipex": "843100",
+                    "id": "data/CN/新疆维吾尔自治区/阿克苏地区/温宿县",
+                    "key": "温宿县",
+                    "lname": "Wensu Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿克苏地区/温宿县"
+                }
+              }
+            },
+            "图木舒克市": {
+              "details": {
+                "lang": "zh",
+                "name": "图木舒克市",
+                "zipex": "843806",
+                "id": "data/CN/新疆维吾尔自治区/图木舒克市",
+                "key": "图木舒克市",
+                "lname": "Tumushuke Shi"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/图木舒克市"
+            },
+            "阿勒泰地区": {
+              "details": {
+                "lang": "zh",
+                "name": "阿勒泰地区",
+                "sub_keys": "阿勒泰市~布尔津县~福海县~富蕴县~哈巴河县~吉木乃县~青河县",
+                "sub_lnames": "Aleitai Shi~Burqin Xian~Fuhai Xian~Fuyun Xian~Habahe Xian~Jeminay Xian~Qinghe Xian",
+                "zipex": "836500",
+                "id": "data/CN/新疆维吾尔自治区/阿勒泰地区",
+                "sub_names": "阿勒泰市~布尔津县~福海县~富蕴县~哈巴河县~吉木乃县~青河县",
+                "key": "阿勒泰地区",
+                "sub_lfnames": "~~Fuhai (Burultokay) Xian~Fuyun (Koktokay) Xian~Habahe (Kaba) Xian~~Qinghe (Qinggil) Xian",
+                "lname": "Altay Shi",
+                "sub_zipexs": "836500~836600~836400~836100~836700~836800~836200"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区",
+              "subs": {
+                "福海县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "福海县",
+                    "zipex": "836400",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/福海县",
+                    "key": "福海县",
+                    "lname": "Fuhai Xian",
+                    "lfname": "Fuhai (Burultokay) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/福海县"
+                },
+                "阿勒泰市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿勒泰市",
+                    "zipex": "836500",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/阿勒泰市",
+                    "key": "阿勒泰市",
+                    "lname": "Aleitai Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/阿勒泰市"
+                },
+                "青河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "青河县",
+                    "zipex": "836200",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/青河县",
+                    "key": "青河县",
+                    "lname": "Qinghe Xian",
+                    "lfname": "Qinghe (Qinggil) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/青河县"
+                },
+                "布尔津县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "布尔津县",
+                    "zipex": "836600",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/布尔津县",
+                    "key": "布尔津县",
+                    "lname": "Burqin Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/布尔津县"
+                },
+                "富蕴县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "富蕴县",
+                    "zipex": "836100",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/富蕴县",
+                    "key": "富蕴县",
+                    "lname": "Fuyun Xian",
+                    "lfname": "Fuyun (Koktokay) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/富蕴县"
+                },
+                "哈巴河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "哈巴河县",
+                    "zipex": "836700",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/哈巴河县",
+                    "key": "哈巴河县",
+                    "lname": "Habahe Xian",
+                    "lfname": "Habahe (Kaba) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/哈巴河县"
+                },
+                "吉木乃县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "吉木乃县",
+                    "zipex": "836800",
+                    "id": "data/CN/新疆维吾尔自治区/阿勒泰地区/吉木乃县",
+                    "key": "吉木乃县",
+                    "lname": "Jeminay Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/阿勒泰地区/吉木乃县"
+                }
+              }
+            },
+            "五家渠市": {
+              "details": {
+                "lang": "zh",
+                "name": "五家渠市",
+                "zipex": "831300",
+                "id": "data/CN/新疆维吾尔自治区/五家渠市",
+                "key": "五家渠市",
+                "lname": "Wujiaqu Shi"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/五家渠市"
+            },
+            "阿拉尔市": {
+              "details": {
+                "lang": "zh",
+                "name": "阿拉尔市",
+                "zipex": "843300",
+                "id": "data/CN/新疆维吾尔自治区/阿拉尔市",
+                "key": "阿拉尔市",
+                "lname": "Ala'er Shi"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/阿拉尔市"
+            },
+            "克拉玛依市": {
+              "details": {
+                "lang": "zh",
+                "name": "克拉玛依市",
+                "sub_keys": "白碱滩区~独山子区~克拉玛依区~乌尔禾区",
+                "sub_lnames": "Baijiantan Qu~Dushanzi Qu~Karamay Qu~Orku Qu",
+                "zipex": "834000",
+                "id": "data/CN/新疆维吾尔自治区/克拉玛依市",
+                "sub_names": "白碱滩区~独山子区~克拉玛依区~乌尔禾区",
+                "key": "克拉玛依市",
+                "lname": "Karamay Shi",
+                "sub_zipexs": "834009~838600~834018~834014"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/克拉玛依市",
+              "subs": {
+                "独山子区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "独山子区",
+                    "zipex": "838600",
+                    "id": "data/CN/新疆维吾尔自治区/克拉玛依市/独山子区",
+                    "key": "独山子区",
+                    "lname": "Dushanzi Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克拉玛依市/独山子区"
+                },
+                "乌尔禾区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乌尔禾区",
+                    "zipex": "834014",
+                    "id": "data/CN/新疆维吾尔自治区/克拉玛依市/乌尔禾区",
+                    "key": "乌尔禾区",
+                    "lname": "Orku Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克拉玛依市/乌尔禾区"
+                },
+                "白碱滩区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "白碱滩区",
+                    "zipex": "834009",
+                    "id": "data/CN/新疆维吾尔自治区/克拉玛依市/白碱滩区",
+                    "key": "白碱滩区",
+                    "lname": "Baijiantan Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克拉玛依市/白碱滩区"
+                },
+                "克拉玛依区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "克拉玛依区",
+                    "zipex": "834018",
+                    "id": "data/CN/新疆维吾尔自治区/克拉玛依市/克拉玛依区",
+                    "key": "克拉玛依区",
+                    "lname": "Karamay Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克拉玛依市/克拉玛依区"
+                }
+              }
+            },
+            "和田地区": {
+              "details": {
+                "lang": "zh",
+                "name": "和田地区",
+                "sub_keys": "策勒县~和田市~和田县~洛浦县~民丰县~墨玉县~皮山县~于田县",
+                "sub_lnames": "Qira Xian~Hotan Shi~Hotan Xian~Lop Xian~Minfeng Xian~Moyu Xian~Pishan Xian~Yutian Xian",
+                "zipex": "848000",
+                "id": "data/CN/新疆维吾尔自治区/和田地区",
+                "sub_names": "策勒县~和田市~和田县~洛浦县~民丰县~墨玉县~皮山县~于田县",
+                "key": "和田地区",
+                "sub_lfnames": "~~~~Minfeng (Niya) Xian~Moyu (Karakax) Xian~Pishan (Guma) Xian~Yutian (Keriya) Xian",
+                "lname": "Hotan Diqu",
+                "sub_zipexs": "848300~848000~848000~848200~848500~848100~845150~848400"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/和田地区",
+              "subs": {
+                "民丰县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "民丰县",
+                    "zipex": "848500",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/民丰县",
+                    "key": "民丰县",
+                    "lname": "Minfeng Xian",
+                    "lfname": "Minfeng (Niya) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/民丰县"
+                },
+                "和田市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "和田市",
+                    "zipex": "848000",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/和田市",
+                    "key": "和田市",
+                    "lname": "Hotan Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/和田市"
+                },
+                "和田县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "和田县",
+                    "zipex": "848000",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/和田县",
+                    "key": "和田县",
+                    "lname": "Hotan Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/和田县"
+                },
+                "于田县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "于田县",
+                    "zipex": "848400",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/于田县",
+                    "key": "于田县",
+                    "lname": "Yutian Xian",
+                    "lfname": "Yutian (Keriya) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/于田县"
+                },
+                "皮山县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "皮山县",
+                    "zipex": "845150",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/皮山县",
+                    "key": "皮山县",
+                    "lname": "Pishan Xian",
+                    "lfname": "Pishan (Guma) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/皮山县"
+                },
+                "墨玉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "墨玉县",
+                    "zipex": "848100",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/墨玉县",
+                    "key": "墨玉县",
+                    "lname": "Moyu Xian",
+                    "lfname": "Moyu (Karakax) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/墨玉县"
+                },
+                "洛浦县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "洛浦县",
+                    "zipex": "848200",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/洛浦县",
+                    "key": "洛浦县",
+                    "lname": "Lop Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/洛浦县"
+                },
+                "策勒县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "策勒县",
+                    "zipex": "848300",
+                    "id": "data/CN/新疆维吾尔自治区/和田地区/策勒县",
+                    "key": "策勒县",
+                    "lname": "Qira Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/和田地区/策勒县"
+                }
+              }
+            },
+            "克孜勒苏柯尔克孜自治州": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "阿合奇县~阿克陶县~阿图什市~乌恰县",
+                "zipex": "845350",
+                "id": "data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州",
+                "key": "克孜勒苏柯尔克孜自治州",
+                "sub_lfnames": "~~~Wuqia (Ulugqat) Xian",
+                "lname": "Kizilsu Zhou",
+                "lfname": "Kizilsu Kirgiz Zizhizhou",
+                "name": "克孜勒苏州",
+                "sub_keys": "阿合奇县~阿克陶县~阿图什市~乌恰县",
+                "sub_lnames": "Akqi Xian~Akto Xian~Artux Shi~Wuqia Xian",
+                "sub_zipexs": "843500~845550~845350~845450"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州",
+              "subs": {
+                "乌恰县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乌恰县",
+                    "zipex": "845450",
+                    "id": "data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/乌恰县",
+                    "key": "乌恰县",
+                    "lname": "Wuqia Xian",
+                    "lfname": "Wuqia (Ulugqat) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/乌恰县"
+                },
+                "阿合奇县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿合奇县",
+                    "zipex": "843500",
+                    "id": "data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿合奇县",
+                    "key": "阿合奇县",
+                    "lname": "Akqi Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿合奇县"
+                },
+                "阿图什市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿图什市",
+                    "zipex": "845350",
+                    "id": "data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿图什市",
+                    "key": "阿图什市",
+                    "lname": "Artux Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿图什市"
+                },
+                "阿克陶县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阿克陶县",
+                    "zipex": "845550",
+                    "id": "data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿克陶县",
+                    "key": "阿克陶县",
+                    "lname": "Akto Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/克孜勒苏柯尔克孜自治州/阿克陶县"
+                }
+              }
+            },
+            "喀什地区": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "巴楚县~伽师县~喀什市~麦盖提县~莎车县~疏附县~疏勒县~塔什库尔干县~叶城县~英吉沙县~岳普湖县~泽普县",
+                "zipex": "844000",
+                "id": "data/CN/新疆维吾尔自治区/喀什地区",
+                "key": "喀什地区",
+                "sub_lfnames": "Bachu (Maralbexi) Xian~Jiashi (Payzawat) Xian~Kashi (Kaxgar) Shi~~Shache (Yarkant) Xian~~~Taxkorgan Tajik Zizhixian~Yecheng (Kargilik) Xian~~~Zepu (Poskam) Xian",
+                "lname": "Kashi Diqu",
+                "lfname": "Kashi (Kaxgar) Diqu",
+                "name": "喀什地区",
+                "sub_keys": "巴楚县~伽师县~喀什市~麦盖提县~莎车县~疏附县~疏勒县~塔什库尔干塔吉克自治县~叶城县~英吉沙县~岳普湖县~泽普县",
+                "sub_lnames": "Bachu Xian~Jiashi Xian~Kashi Shi~Markit Xian~Shache Xian~Shufu Xian~Shule Xian~Taxkorgan Xian~Yecheng Xian~Yengisar Xian~Yopurga Xian~Zepu Xian",
+                "sub_zipexs": "843800~844300~844000~844600~844700~844100~844200~845250~844900~844500~844400~844800"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/喀什地区",
+              "subs": {
+                "伽师县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "伽师县",
+                    "zipex": "844300",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/伽师县",
+                    "key": "伽师县",
+                    "lname": "Jiashi Xian",
+                    "lfname": "Jiashi (Payzawat) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/伽师县"
+                },
+                "岳普湖县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "岳普湖县",
+                    "zipex": "844400",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/岳普湖县",
+                    "key": "岳普湖县",
+                    "lname": "Yopurga Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/岳普湖县"
+                },
+                "泽普县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "泽普县",
+                    "zipex": "844800",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/泽普县",
+                    "key": "泽普县",
+                    "lname": "Zepu Xian",
+                    "lfname": "Zepu (Poskam) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/泽普县"
+                },
+                "塔什库尔干塔吉克自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "塔什库尔干县",
+                    "zipex": "845250",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/塔什库尔干塔吉克自治县",
+                    "key": "塔什库尔干塔吉克自治县",
+                    "lname": "Taxkorgan Xian",
+                    "lfname": "Taxkorgan Tajik Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/塔什库尔干塔吉克自治县"
+                },
+                "叶城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "叶城县",
+                    "zipex": "844900",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/叶城县",
+                    "key": "叶城县",
+                    "lname": "Yecheng Xian",
+                    "lfname": "Yecheng (Kargilik) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/叶城县"
+                },
+                "莎车县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "莎车县",
+                    "zipex": "844700",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/莎车县",
+                    "key": "莎车县",
+                    "lname": "Shache Xian",
+                    "lfname": "Shache (Yarkant) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/莎车县"
+                },
+                "麦盖提县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "麦盖提县",
+                    "zipex": "844600",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/麦盖提县",
+                    "key": "麦盖提县",
+                    "lname": "Markit Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/麦盖提县"
+                },
+                "疏勒县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "疏勒县",
+                    "zipex": "844200",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/疏勒县",
+                    "key": "疏勒县",
+                    "lname": "Shule Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/疏勒县"
+                },
+                "喀什市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "喀什市",
+                    "zipex": "844000",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/喀什市",
+                    "key": "喀什市",
+                    "lname": "Kashi Shi",
+                    "lfname": "Kashi (Kaxgar) Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/喀什市"
+                },
+                "英吉沙县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "英吉沙县",
+                    "zipex": "844500",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/英吉沙县",
+                    "key": "英吉沙县",
+                    "lname": "Yengisar Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/英吉沙县"
+                },
+                "巴楚县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "巴楚县",
+                    "zipex": "843800",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/巴楚县",
+                    "key": "巴楚县",
+                    "lname": "Bachu Xian",
+                    "lfname": "Bachu (Maralbexi) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/巴楚县"
+                },
+                "疏附县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "疏附县",
+                    "zipex": "844100",
+                    "id": "data/CN/新疆维吾尔自治区/喀什地区/疏附县",
+                    "key": "疏附县",
+                    "lname": "Shufu Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/喀什地区/疏附县"
+                }
+              }
+            },
+            "石河子市": {
+              "details": {
+                "lang": "zh",
+                "name": "石河子市",
+                "zipex": "832001",
+                "id": "data/CN/新疆维吾尔自治区/石河子市",
+                "key": "石河子市",
+                "lname": "Shihezi Shi"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/石河子市"
+            },
+            "乌鲁木齐市": {
+              "details": {
+                "lang": "zh",
+                "name": "乌鲁木齐市",
+                "sub_keys": "达坂城区~米东区~沙依巴克区~水磨沟区~天山区~头屯河区~乌鲁木齐县~新市区",
+                "sub_lnames": "Dabancheng Qu~Midong Qu~Saybagh Qu~Shuimogou Qu~Tianshan Qu~Toutunhe Qu~Ürümqi Xian~Xinshi Qu",
+                "zipex": "830002",
+                "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市",
+                "sub_names": "达坂城区~米东区~沙依巴克区~水磨沟区~天山区~头屯河区~乌鲁木齐县~新市区",
+                "key": "乌鲁木齐市",
+                "lname": "Ürümqi Shi",
+                "sub_zipexs": "830039~831400~830000~830017~830002~830023~830002~830011"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市",
+              "subs": {
+                "天山区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "天山区",
+                    "zipex": "830002",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/天山区",
+                    "key": "天山区",
+                    "lname": "Tianshan Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/天山区"
+                },
+                "乌鲁木齐县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乌鲁木齐县",
+                    "zipex": "830002",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/乌鲁木齐县",
+                    "key": "乌鲁木齐县",
+                    "lname": "Ürümqi Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/乌鲁木齐县"
+                },
+                "水磨沟区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "水磨沟区",
+                    "zipex": "830017",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/水磨沟区",
+                    "key": "水磨沟区",
+                    "lname": "Shuimogou Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/水磨沟区"
+                },
+                "头屯河区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "头屯河区",
+                    "zipex": "830023",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/头屯河区",
+                    "key": "头屯河区",
+                    "lname": "Toutunhe Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/头屯河区"
+                },
+                "达坂城区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "达坂城区",
+                    "zipex": "830039",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/达坂城区",
+                    "key": "达坂城区",
+                    "lname": "Dabancheng Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/达坂城区"
+                },
+                "新市区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新市区",
+                    "zipex": "830011",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/新市区",
+                    "key": "新市区",
+                    "lname": "Xinshi Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/新市区"
+                },
+                "米东区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "米东区",
+                    "zipex": "831400",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/米东区",
+                    "key": "米东区",
+                    "lname": "Midong Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/米东区"
+                },
+                "沙依巴克区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沙依巴克区",
+                    "zipex": "830000",
+                    "id": "data/CN/新疆维吾尔自治区/乌鲁木齐市/沙依巴克区",
+                    "key": "沙依巴克区",
+                    "lname": "Saybagh Qu"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/乌鲁木齐市/沙依巴克区"
+                }
+              }
+            },
+            "塔城地区": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "额敏县~和布克赛尔县~沙湾县~塔城市~托里县~乌苏市~裕民县",
+                "zipex": "834700",
+                "id": "data/CN/新疆维吾尔自治区/塔城地区",
+                "key": "塔城地区",
+                "sub_lfnames": "Emin (Dorbiljin) Xian~Hoboksar Mongol Zizhixian~~Tachung (Qoqek) Shi~~~Yumin (Qagantokay) Xian",
+                "lname": "Tacheng Diqu",
+                "lfname": "Tacheng (Qoqek) Diqu",
+                "name": "塔城地区",
+                "sub_keys": "额敏县~和布克赛尔蒙古自治县~沙湾县~塔城市~托里县~乌苏市~裕民县",
+                "sub_lnames": "Emin Xian~Hoboksar Xian~Shawan Xian~Tachung Shi~Toli Xian~Usu Shi~Yumin Xian",
+                "sub_zipexs": "834600~834400~832100~834300~834500~833000~834800"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/塔城地区",
+              "subs": {
+                "托里县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "托里县",
+                    "zipex": "834500",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/托里县",
+                    "key": "托里县",
+                    "lname": "Toli Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/托里县"
+                },
+                "乌苏市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乌苏市",
+                    "zipex": "833000",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/乌苏市",
+                    "key": "乌苏市",
+                    "lname": "Usu Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/乌苏市"
+                },
+                "裕民县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "裕民县",
+                    "zipex": "834800",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/裕民县",
+                    "key": "裕民县",
+                    "lname": "Yumin Xian",
+                    "lfname": "Yumin (Qagantokay) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/裕民县"
+                },
+                "沙湾县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沙湾县",
+                    "zipex": "832100",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/沙湾县",
+                    "key": "沙湾县",
+                    "lname": "Shawan Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/沙湾县"
+                },
+                "额敏县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "额敏县",
+                    "zipex": "834600",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/额敏县",
+                    "key": "额敏县",
+                    "lname": "Emin Xian",
+                    "lfname": "Emin (Dorbiljin) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/额敏县"
+                },
+                "和布克赛尔蒙古自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "和布克赛尔县",
+                    "zipex": "834400",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/和布克赛尔蒙古自治县",
+                    "key": "和布克赛尔蒙古自治县",
+                    "lname": "Hoboksar Xian",
+                    "lfname": "Hoboksar Mongol Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/和布克赛尔蒙古自治县"
+                },
+                "塔城市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "塔城市",
+                    "zipex": "834300",
+                    "id": "data/CN/新疆维吾尔自治区/塔城地区/塔城市",
+                    "key": "塔城市",
+                    "lname": "Tachung Shi",
+                    "lfname": "Tachung (Qoqek) Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/塔城地区/塔城市"
+                }
+              }
+            },
+            "吐鲁番地区": {
+              "details": {
+                "lang": "zh",
+                "name": "吐鲁番地区",
+                "sub_keys": "鄯善县~吐鲁番市~托克逊县",
+                "sub_lnames": "Shanshan Xian~Turpan Shi~Toksun Xian",
+                "zipex": "838000",
+                "id": "data/CN/新疆维吾尔自治区/吐鲁番地区",
+                "sub_names": "鄯善县~吐鲁番市~托克逊县",
+                "key": "吐鲁番地区",
+                "sub_lfnames": "Shanshan (Piqan) Xian~~",
+                "lname": "Turpan Diqu",
+                "sub_zipexs": "838200~838000~838100"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/吐鲁番地区",
+              "subs": {
+                "吐鲁番市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "吐鲁番市",
+                    "zipex": "838000",
+                    "id": "data/CN/新疆维吾尔自治区/吐鲁番地区/吐鲁番市",
+                    "key": "吐鲁番市",
+                    "lname": "Turpan Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/吐鲁番地区/吐鲁番市"
+                },
+                "托克逊县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "托克逊县",
+                    "zipex": "838100",
+                    "id": "data/CN/新疆维吾尔自治区/吐鲁番地区/托克逊县",
+                    "key": "托克逊县",
+                    "lname": "Toksun Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/吐鲁番地区/托克逊县"
+                },
+                "鄯善县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "鄯善县",
+                    "zipex": "838200",
+                    "id": "data/CN/新疆维吾尔自治区/吐鲁番地区/鄯善县",
+                    "key": "鄯善县",
+                    "lname": "Shanshan Xian",
+                    "lfname": "Shanshan (Piqan) Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/吐鲁番地区/鄯善县"
+                }
+              }
+            },
+            "昌吉回族自治州": {
+              "details": {
+                "lang": "zh",
+                "sub_names": "昌吉市~阜康市~呼图壁县~吉木萨尔县~玛纳斯县~木垒县~奇台县",
+                "zipex": "831100",
+                "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州",
+                "key": "昌吉回族自治州",
+                "sub_lfnames": "~~~~~Mori Kazak Zizhixian~",
+                "lname": "Changji Zhou",
+                "lfname": "Changji Huizu Zizhizhou",
+                "name": "昌吉州",
+                "sub_keys": "昌吉市~阜康市~呼图壁县~吉木萨尔县~玛纳斯县~木垒哈萨克自治县~奇台县",
+                "sub_lnames": "Changji Shi~Fukang Shi~Hutubi Xian~Jimsar Xian~Manas Xian~Mori Xian~Qitai Xian",
+                "sub_zipexs": "831100~831500~831200~831700~832200~831900~831800"
+              },
+              "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州",
+              "subs": {
+                "呼图壁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "呼图壁县",
+                    "zipex": "831200",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/呼图壁县",
+                    "key": "呼图壁县",
+                    "lname": "Hutubi Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/呼图壁县"
+                },
+                "阜康市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阜康市",
+                    "zipex": "831500",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/阜康市",
+                    "key": "阜康市",
+                    "lname": "Fukang Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/阜康市"
+                },
+                "木垒哈萨克自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "木垒县",
+                    "zipex": "831900",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/木垒哈萨克自治县",
+                    "key": "木垒哈萨克自治县",
+                    "lname": "Mori Xian",
+                    "lfname": "Mori Kazak Zizhixian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/木垒哈萨克自治县"
+                },
+                "昌吉市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "昌吉市",
+                    "zipex": "831100",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/昌吉市",
+                    "key": "昌吉市",
+                    "lname": "Changji Shi"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/昌吉市"
+                },
+                "吉木萨尔县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "吉木萨尔县",
+                    "zipex": "831700",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/吉木萨尔县",
+                    "key": "吉木萨尔县",
+                    "lname": "Jimsar Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/吉木萨尔县"
+                },
+                "玛纳斯县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "玛纳斯县",
+                    "zipex": "832200",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/玛纳斯县",
+                    "key": "玛纳斯县",
+                    "lname": "Manas Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/玛纳斯县"
+                },
+                "奇台县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "奇台县",
+                    "zipex": "831800",
+                    "id": "data/CN/新疆维吾尔自治区/昌吉回族自治州/奇台县",
+                    "key": "奇台县",
+                    "lname": "Qitai Xian"
+                  },
+                  "url": "/address/data/CN/新疆维吾尔自治区/昌吉回族自治州/奇台县"
+                }
+              }
+            }
+          }
+        },
+        "河北省": {
+          "details": {
+            "sub_mores": "true~true~true~true~true~true~true~true~true~true~true",
+            "lang": "zh",
+            "name": "河北省",
+            "sub_keys": "保定市~沧州市~承德市~邯郸市~衡水市~廊坊市~秦皇岛市~石家庄市~唐山市~邢台市~张家口市",
+            "sub_lnames": "Baoding Shi~Cangzhou Shi~Chengde Shi~Handan Shi~Hengshui Shi~Langfang Shi~Qinhuangdao Shi~Shijiazhuang Shi~Tangshan Shi~Xingtai Shi~Zhangjiakou Shi",
+            "sub_zipexs": "071052~061001~067000~056002~053000~065000~066000~050011~063006~054001~075061",
+            "id": "data/CN/河北省",
+            "sub_names": "保定市~沧州市~承德市~邯郸市~衡水市~廊坊市~秦皇岛市~石家庄市~唐山市~邢台市~张家口市",
+            "key": "河北省",
+            "isoid": "13",
+            "lname": "Hebei Sheng"
+          },
+          "url": "/address/data/CN/河北省",
+          "subs": {
+            "保定市": {
+              "details": {
+                "lang": "zh",
+                "name": "保定市",
+                "sub_keys": "安国市~安新县~北市区~博野县~定兴县~定州市~阜平县~高碑店市~高阳县~涞水县~涞源县~蠡县~满城县~南市区~清苑县~曲阳县~容城县~顺平县~唐县~望都县~新市区~雄县~徐水县~易县~涿州市",
+                "sub_lnames": "Anguo Shi~Anxin Xian~Beishi Qu~Boye Xian~Dingxing Xian~Dingzhou Shi~Fuping Xian~Gaobeidian Shi~Gaoyang Xian~Laishui Xian~Laiyuan Xian~Li Xian~Mancheng Xian~Nanshi Qu~Qingyuan Xian~Quyang Xian~Rongcheng Xian~Shunping Xian~Tang Xian~Wangdu Xian~Xinshi Qu~Xiong Xian~Xushui Xian~Yi Xian~Zhuozhou Shi",
+                "zipex": "071052",
+                "id": "data/CN/河北省/保定市",
+                "sub_names": "安国市~安新县~北市区~博野县~定兴县~定州市~阜平县~高碑店市~高阳县~涞水县~涞源县~蠡县~满城县~南市区~清苑县~曲阳县~容城县~顺平县~唐县~望都县~新市区~雄县~徐水县~易县~涿州市",
+                "key": "保定市",
+                "lname": "Baoding Shi",
+                "sub_zipexs": "071200~071600~071000~071300~074200~073000~073200~074000~071500~074100~074300~071400~072150~071000~071100~073100~071700~072250~072350~072450~071052~071800~072550~074200~072750"
+              },
+              "url": "/address/data/CN/河北省/保定市",
+              "subs": {
+                "涞水县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "涞水县",
+                    "zipex": "074100",
+                    "id": "data/CN/河北省/保定市/涞水县",
+                    "key": "涞水县",
+                    "lname": "Laishui Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/涞水县"
+                },
+                "定州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "定州市",
+                    "zipex": "073000",
+                    "id": "data/CN/河北省/保定市/定州市",
+                    "key": "定州市",
+                    "lname": "Dingzhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/定州市"
+                },
+                "定兴县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "定兴县",
+                    "zipex": "074200",
+                    "id": "data/CN/河北省/保定市/定兴县",
+                    "key": "定兴县",
+                    "lname": "Dingxing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/定兴县"
+                },
+                "北市区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "北市区",
+                    "zipex": "071000",
+                    "id": "data/CN/河北省/保定市/北市区",
+                    "key": "北市区",
+                    "lname": "Beishi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/北市区"
+                },
+                "雄县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "雄县",
+                    "zipex": "071800",
+                    "id": "data/CN/河北省/保定市/雄县",
+                    "key": "雄县",
+                    "lname": "Xiong Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/雄县"
+                },
+                "阜平县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阜平县",
+                    "zipex": "073200",
+                    "id": "data/CN/河北省/保定市/阜平县",
+                    "key": "阜平县",
+                    "lname": "Fuping Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/阜平县"
+                },
+                "新市区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新市区",
+                    "zipex": "071052",
+                    "id": "data/CN/河北省/保定市/新市区",
+                    "key": "新市区",
+                    "lname": "Xinshi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/新市区"
+                },
+                "顺平县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "顺平县",
+                    "zipex": "072250",
+                    "id": "data/CN/河北省/保定市/顺平县",
+                    "key": "顺平县",
+                    "lname": "Shunping Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/顺平县"
+                },
+                "曲阳县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "曲阳县",
+                    "zipex": "073100",
+                    "id": "data/CN/河北省/保定市/曲阳县",
+                    "key": "曲阳县",
+                    "lname": "Quyang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/曲阳县"
+                },
+                "易县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "易县",
+                    "zipex": "074200",
+                    "id": "data/CN/河北省/保定市/易县",
+                    "key": "易县",
+                    "lname": "Yi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/易县"
+                },
+                "安国市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "安国市",
+                    "zipex": "071200",
+                    "id": "data/CN/河北省/保定市/安国市",
+                    "key": "安国市",
+                    "lname": "Anguo Shi"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/安国市"
+                },
+                "望都县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "望都县",
+                    "zipex": "072450",
+                    "id": "data/CN/河北省/保定市/望都县",
+                    "key": "望都县",
+                    "lname": "Wangdu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/望都县"
+                },
+                "满城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "满城县",
+                    "zipex": "072150",
+                    "id": "data/CN/河北省/保定市/满城县",
+                    "key": "满城县",
+                    "lname": "Mancheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/满城县"
+                },
+                "涿州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "涿州市",
+                    "zipex": "072750",
+                    "id": "data/CN/河北省/保定市/涿州市",
+                    "key": "涿州市",
+                    "lname": "Zhuozhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/涿州市"
+                },
+                "南市区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "南市区",
+                    "zipex": "071000",
+                    "id": "data/CN/河北省/保定市/南市区",
+                    "key": "南市区",
+                    "lname": "Nanshi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/南市区"
+                },
+                "清苑县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "清苑县",
+                    "zipex": "071100",
+                    "id": "data/CN/河北省/保定市/清苑县",
+                    "key": "清苑县",
+                    "lname": "Qingyuan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/清苑县"
+                },
+                "安新县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "安新县",
+                    "zipex": "071600",
+                    "id": "data/CN/河北省/保定市/安新县",
+                    "key": "安新县",
+                    "lname": "Anxin Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/安新县"
+                },
+                "涞源县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "涞源县",
+                    "zipex": "074300",
+                    "id": "data/CN/河北省/保定市/涞源县",
+                    "key": "涞源县",
+                    "lname": "Laiyuan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/涞源县"
+                },
+                "博野县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "博野县",
+                    "zipex": "071300",
+                    "id": "data/CN/河北省/保定市/博野县",
+                    "key": "博野县",
+                    "lname": "Boye Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/博野县"
+                },
+                "蠡县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "蠡县",
+                    "zipex": "071400",
+                    "id": "data/CN/河北省/保定市/蠡县",
+                    "key": "蠡县",
+                    "lname": "Li Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/蠡县"
+                },
+                "高阳县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "高阳县",
+                    "zipex": "071500",
+                    "id": "data/CN/河北省/保定市/高阳县",
+                    "key": "高阳县",
+                    "lname": "Gaoyang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/高阳县"
+                },
+                "唐县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "唐县",
+                    "zipex": "072350",
+                    "id": "data/CN/河北省/保定市/唐县",
+                    "key": "唐县",
+                    "lname": "Tang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/唐县"
+                },
+                "容城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "容城县",
+                    "zipex": "071700",
+                    "id": "data/CN/河北省/保定市/容城县",
+                    "key": "容城县",
+                    "lname": "Rongcheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/容城县"
+                },
+                "徐水县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "徐水县",
+                    "zipex": "072550",
+                    "id": "data/CN/河北省/保定市/徐水县",
+                    "key": "徐水县",
+                    "lname": "Xushui Xian"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/徐水县"
+                },
+                "高碑店市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "高碑店市",
+                    "zipex": "074000",
+                    "id": "data/CN/河北省/保定市/高碑店市",
+                    "key": "高碑店市",
+                    "lname": "Gaobeidian Shi"
+                  },
+                  "url": "/address/data/CN/河北省/保定市/高碑店市"
+                }
+              }
+            },
+            "秦皇岛市": {
+              "details": {
+                "lang": "zh",
+                "name": "秦皇岛市",
+                "sub_keys": "北戴河区~昌黎县~抚宁县~海港区~卢龙县~青龙满族自治县~山海关区",
+                "sub_lnames": "Beidaihe Qu~Changli Xian~Funing Xian~Haigang Qu~Lulong Xian~Qinglong Xian~Shanhaiguan Qu",
+                "zipex": "066000",
+                "id": "data/CN/河北省/秦皇岛市",
+                "sub_names": "北戴河区~昌黎县~抚宁县~海港区~卢龙县~青龙县~山海关区",
+                "key": "秦皇岛市",
+                "sub_lfnames": "~~~~~Qinglong Manzu Zizhixian~",
+                "lname": "Qinhuangdao Shi",
+                "sub_zipexs": "066100~066600~066300~066000~066400~066500~066200"
+              },
+              "url": "/address/data/CN/河北省/秦皇岛市",
+              "subs": {
+                "北戴河区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "北戴河区",
+                    "zipex": "066100",
+                    "id": "data/CN/河北省/秦皇岛市/北戴河区",
+                    "key": "北戴河区",
+                    "lname": "Beidaihe Qu"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/北戴河区"
+                },
+                "抚宁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "抚宁县",
+                    "zipex": "066300",
+                    "id": "data/CN/河北省/秦皇岛市/抚宁县",
+                    "key": "抚宁县",
+                    "lname": "Funing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/抚宁县"
+                },
+                "海港区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "海港区",
+                    "zipex": "066000",
+                    "id": "data/CN/河北省/秦皇岛市/海港区",
+                    "key": "海港区",
+                    "lname": "Haigang Qu"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/海港区"
+                },
+                "青龙满族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "青龙县",
+                    "zipex": "066500",
+                    "id": "data/CN/河北省/秦皇岛市/青龙满族自治县",
+                    "key": "青龙满族自治县",
+                    "lname": "Qinglong Xian",
+                    "lfname": "Qinglong Manzu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/青龙满族自治县"
+                },
+                "山海关区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "山海关区",
+                    "zipex": "066200",
+                    "id": "data/CN/河北省/秦皇岛市/山海关区",
+                    "key": "山海关区",
+                    "lname": "Shanhaiguan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/山海关区"
+                },
+                "卢龙县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "卢龙县",
+                    "zipex": "066400",
+                    "id": "data/CN/河北省/秦皇岛市/卢龙县",
+                    "key": "卢龙县",
+                    "lname": "Lulong Xian"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/卢龙县"
+                },
+                "昌黎县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "昌黎县",
+                    "zipex": "066600",
+                    "id": "data/CN/河北省/秦皇岛市/昌黎县",
+                    "key": "昌黎县",
+                    "lname": "Changli Xian"
+                  },
+                  "url": "/address/data/CN/河北省/秦皇岛市/昌黎县"
+                }
+              }
+            },
+            "廊坊市": {
+              "details": {
+                "lang": "zh",
+                "name": "廊坊市",
+                "sub_keys": "安次区~霸州市~大厂回族自治县~大城县~固安县~广阳区~三河市~文安县~香河县~永清县",
+                "sub_lnames": "Anci Qu~Bazhou Shi~Dachang Xian~Daicheng Xian~Gu'an Xian~Guangyang Qu~Sanhe Shi~Wen'an Xian~Xianghe Xian~Yongqing Xian",
+                "zipex": "065000",
+                "id": "data/CN/河北省/廊坊市",
+                "sub_names": "安次区~霸州市~大厂县~大城县~固安县~广阳区~三河市~文安县~香河县~永清县",
+                "key": "廊坊市",
+                "sub_lfnames": "~~Dachang Huizu Zizhixian~~~~~~~",
+                "lname": "Langfang Shi",
+                "sub_zipexs": "065000~065700~065300~065900~065500~065000~065200~065800~065400~065600"
+              },
+              "url": "/address/data/CN/河北省/廊坊市",
+              "subs": {
+                "大城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "大城县",
+                    "zipex": "065900",
+                    "id": "data/CN/河北省/廊坊市/大城县",
+                    "key": "大城县",
+                    "lname": "Daicheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/大城县"
+                },
+                "大厂回族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "大厂县",
+                    "zipex": "065300",
+                    "id": "data/CN/河北省/廊坊市/大厂回族自治县",
+                    "key": "大厂回族自治县",
+                    "lname": "Dachang Xian",
+                    "lfname": "Dachang Huizu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/大厂回族自治县"
+                },
+                "三河市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "三河市",
+                    "zipex": "065200",
+                    "id": "data/CN/河北省/廊坊市/三河市",
+                    "key": "三河市",
+                    "lname": "Sanhe Shi"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/三河市"
+                },
+                "安次区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "安次区",
+                    "zipex": "065000",
+                    "id": "data/CN/河北省/廊坊市/安次区",
+                    "key": "安次区",
+                    "lname": "Anci Qu"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/安次区"
+                },
+                "永清县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "永清县",
+                    "zipex": "065600",
+                    "id": "data/CN/河北省/廊坊市/永清县",
+                    "key": "永清县",
+                    "lname": "Yongqing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/永清县"
+                },
+                "广阳区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "广阳区",
+                    "zipex": "065000",
+                    "id": "data/CN/河北省/廊坊市/广阳区",
+                    "key": "广阳区",
+                    "lname": "Guangyang Qu"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/广阳区"
+                },
+                "香河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "香河县",
+                    "zipex": "065400",
+                    "id": "data/CN/河北省/廊坊市/香河县",
+                    "key": "香河县",
+                    "lname": "Xianghe Xian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/香河县"
+                },
+                "霸州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "霸州市",
+                    "zipex": "065700",
+                    "id": "data/CN/河北省/廊坊市/霸州市",
+                    "key": "霸州市",
+                    "lname": "Bazhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/霸州市"
+                },
+                "固安县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "固安县",
+                    "zipex": "065500",
+                    "id": "data/CN/河北省/廊坊市/固安县",
+                    "key": "固安县",
+                    "lname": "Gu'an Xian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/固安县"
+                },
+                "文安县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "文安县",
+                    "zipex": "065800",
+                    "id": "data/CN/河北省/廊坊市/文安县",
+                    "key": "文安县",
+                    "lname": "Wen'an Xian"
+                  },
+                  "url": "/address/data/CN/河北省/廊坊市/文安县"
+                }
+              }
+            },
+            "唐山市": {
+              "details": {
+                "lang": "zh",
+                "name": "唐山市",
+                "sub_keys": "丰南区~丰润区~古冶区~开平区~乐亭县~路北区~路南区~滦南县~滦县~迁安市~迁西县~唐海县~玉田县~遵化市",
+                "sub_lnames": "Fengnan Qu~Fengrun Qu~Guye Qu~Kaiping Qu~Leting Xian~Lubei Qu~Lunan Qu~Luannan Xian~Luan Xian~Qian'an Shi~Qianxi Xian~Tanghai Xian~Yutian Xian~Zunhua Shi",
+                "zipex": "063006",
+                "id": "data/CN/河北省/唐山市",
+                "sub_names": "丰南区~丰润区~古冶区~开平区~乐亭县~路北区~路南区~滦南县~滦县~迁安市~迁西县~唐海县~玉田县~遵化市",
+                "key": "唐山市",
+                "lname": "Tangshan Shi",
+                "sub_zipexs": "063300~063030~063104~063021~063600~063015~063017~063500~063700~064400~064300~063200~064100~064200"
+              },
+              "url": "/address/data/CN/河北省/唐山市",
+              "subs": {
+                "玉田县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "玉田县",
+                    "zipex": "064100",
+                    "id": "data/CN/河北省/唐山市/玉田县",
+                    "key": "玉田县",
+                    "lname": "Yutian Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/玉田县"
+                },
+                "古冶区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "古冶区",
+                    "zipex": "063104",
+                    "id": "data/CN/河北省/唐山市/古冶区",
+                    "key": "古冶区",
+                    "lname": "Guye Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/古冶区"
+                },
+                "唐海县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "唐海县",
+                    "zipex": "063200",
+                    "id": "data/CN/河北省/唐山市/唐海县",
+                    "key": "唐海县",
+                    "lname": "Tanghai Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/唐海县"
+                },
+                "遵化市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "遵化市",
+                    "zipex": "064200",
+                    "id": "data/CN/河北省/唐山市/遵化市",
+                    "key": "遵化市",
+                    "lname": "Zunhua Shi"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/遵化市"
+                },
+                "路南区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "路南区",
+                    "zipex": "063017",
+                    "id": "data/CN/河北省/唐山市/路南区",
+                    "key": "路南区",
+                    "lname": "Lunan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/路南区"
+                },
+                "开平区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "开平区",
+                    "zipex": "063021",
+                    "id": "data/CN/河北省/唐山市/开平区",
+                    "key": "开平区",
+                    "lname": "Kaiping Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/开平区"
+                },
+                "乐亭县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "乐亭县",
+                    "zipex": "063600",
+                    "id": "data/CN/河北省/唐山市/乐亭县",
+                    "key": "乐亭县",
+                    "lname": "Leting Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/乐亭县"
+                },
+                "迁西县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "迁西县",
+                    "zipex": "064300",
+                    "id": "data/CN/河北省/唐山市/迁西县",
+                    "key": "迁西县",
+                    "lname": "Qianxi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/迁西县"
+                },
+                "丰润区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "丰润区",
+                    "zipex": "063030",
+                    "id": "data/CN/河北省/唐山市/丰润区",
+                    "key": "丰润区",
+                    "lname": "Fengrun Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/丰润区"
+                },
+                "滦县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "滦县",
+                    "zipex": "063700",
+                    "id": "data/CN/河北省/唐山市/滦县",
+                    "key": "滦县",
+                    "lname": "Luan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/滦县"
+                },
+                "丰南区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "丰南区",
+                    "zipex": "063300",
+                    "id": "data/CN/河北省/唐山市/丰南区",
+                    "key": "丰南区",
+                    "lname": "Fengnan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/丰南区"
+                },
+                "路北区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "路北区",
+                    "zipex": "063015",
+                    "id": "data/CN/河北省/唐山市/路北区",
+                    "key": "路北区",
+                    "lname": "Lubei Qu"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/路北区"
+                },
+                "迁安市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "迁安市",
+                    "zipex": "064400",
+                    "id": "data/CN/河北省/唐山市/迁安市",
+                    "key": "迁安市",
+                    "lname": "Qian'an Shi"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/迁安市"
+                },
+                "滦南县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "滦南县",
+                    "zipex": "063500",
+                    "id": "data/CN/河北省/唐山市/滦南县",
+                    "key": "滦南县",
+                    "lname": "Luannan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/唐山市/滦南县"
+                }
+              }
+            },
+            "衡水市": {
+              "details": {
+                "lang": "zh",
+                "name": "衡水市",
+                "sub_keys": "安平县~阜城县~故城县~冀州市~景县~饶阳县~深州市~桃城区~武强县~武邑县~枣强县",
+                "sub_lnames": "Anping Xian~Fucheng Xian~Gucheng Xian~Jizhou Shi~Jing Xian~Raoyang Xian~Shenzhou Shi~Taocheng Qu~Wuqiang Xian~Wuyi Xian~Zaoqiang Xian",
+                "zipex": "053000",
+                "id": "data/CN/河北省/衡水市",
+                "sub_names": "安平县~阜城县~故城县~冀州市~景县~饶阳县~深州市~桃城区~武强县~武邑县~枣强县",
+                "key": "衡水市",
+                "lname": "Hengshui Shi",
+                "sub_zipexs": "053600~053700~053800~053200~053500~053900~053800~053000~053300~053400~053100"
+              },
+              "url": "/address/data/CN/河北省/衡水市",
+              "subs": {
+                "武邑县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "武邑县",
+                    "zipex": "053400",
+                    "id": "data/CN/河北省/衡水市/武邑县",
+                    "key": "武邑县",
+                    "lname": "Wuyi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/武邑县"
+                },
+                "武强县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "武强县",
+                    "zipex": "053300",
+                    "id": "data/CN/河北省/衡水市/武强县",
+                    "key": "武强县",
+                    "lname": "Wuqiang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/武强县"
+                },
+                "桃城区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桃城区",
+                    "zipex": "053000",
+                    "id": "data/CN/河北省/衡水市/桃城区",
+                    "key": "桃城区",
+                    "lname": "Taocheng Qu"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/桃城区"
+                },
+                "饶阳县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "饶阳县",
+                    "zipex": "053900",
+                    "id": "data/CN/河北省/衡水市/饶阳县",
+                    "key": "饶阳县",
+                    "lname": "Raoyang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/饶阳县"
+                },
+                "深州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "深州市",
+                    "zipex": "053800",
+                    "id": "data/CN/河北省/衡水市/深州市",
+                    "key": "深州市",
+                    "lname": "Shenzhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/深州市"
+                },
+                "枣强县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "枣强县",
+                    "zipex": "053100",
+                    "id": "data/CN/河北省/衡水市/枣强县",
+                    "key": "枣强县",
+                    "lname": "Zaoqiang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/枣强县"
+                },
+                "故城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "故城县",
+                    "zipex": "053800",
+                    "id": "data/CN/河北省/衡水市/故城县",
+                    "key": "故城县",
+                    "lname": "Gucheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/故城县"
+                },
+                "冀州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "冀州市",
+                    "zipex": "053200",
+                    "id": "data/CN/河北省/衡水市/冀州市",
+                    "key": "冀州市",
+                    "lname": "Jizhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/冀州市"
+                },
+                "阜城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阜城县",
+                    "zipex": "053700",
+                    "id": "data/CN/河北省/衡水市/阜城县",
+                    "key": "阜城县",
+                    "lname": "Fucheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/阜城县"
+                },
+                "安平县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "安平县",
+                    "zipex": "053600",
+                    "id": "data/CN/河北省/衡水市/安平县",
+                    "key": "安平县",
+                    "lname": "Anping Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/安平县"
+                },
+                "景县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "景县",
+                    "zipex": "053500",
+                    "id": "data/CN/河北省/衡水市/景县",
+                    "key": "景县",
+                    "lname": "Jing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/衡水市/景县"
+                }
+              }
+            },
+            "沧州市": {
+              "details": {
+                "lang": "zh",
+                "name": "沧州市",
+                "sub_keys": "沧县~东光县~海兴县~河间市~黄骅市~孟村回族自治县~南皮县~泊头市~青县~任丘市~肃宁县~吴桥县~献县~新华区~盐山县~运河区",
+                "sub_lnames": "Cang Xian~Dongguang Xian~Haixing Xian~Hejian Shi~Huanghua Shi~Mengcun Xian~Nanpi Xian~Botou Shi~Qing Xian~Renqiu Shi~Suning Xian~Wuqiao Xian~Xian Xian~Xinhua Qu~Yanshan Xian~Yunhe Qu",
+                "zipex": "061001",
+                "id": "data/CN/河北省/沧州市",
+                "sub_names": "沧县~东光县~海兴县~河间市~黄骅市~孟村县~南皮县~泊头市~青县~任丘市~肃宁县~吴桥县~献县~新华区~盐山县~运河区",
+                "key": "沧州市",
+                "sub_lfnames": "~~~~~Mengcun Huizu Zizhixian~~~~~~~~~~",
+                "lname": "Cangzhou Shi",
+                "sub_zipexs": "061000~061600~061200~062450~061100~061400~061500~062150~062650~062550~062350~061800~062250~061000~061300~061000"
+              },
+              "url": "/address/data/CN/河北省/沧州市",
+              "subs": {
+                "泊头市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "泊头市",
+                    "zipex": "062150",
+                    "id": "data/CN/河北省/沧州市/泊头市",
+                    "key": "泊头市",
+                    "lname": "Botou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/泊头市"
+                },
+                "吴桥县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "吴桥县",
+                    "zipex": "061800",
+                    "id": "data/CN/河北省/沧州市/吴桥县",
+                    "key": "吴桥县",
+                    "lname": "Wuqiao Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/吴桥县"
+                },
+                "孟村回族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "孟村县",
+                    "zipex": "061400",
+                    "id": "data/CN/河北省/沧州市/孟村回族自治县",
+                    "key": "孟村回族自治县",
+                    "lname": "Mengcun Xian",
+                    "lfname": "Mengcun Huizu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/孟村回族自治县"
+                },
+                "运河区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "运河区",
+                    "zipex": "061000",
+                    "id": "data/CN/河北省/沧州市/运河区",
+                    "key": "运河区",
+                    "lname": "Yunhe Qu"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/运河区"
+                },
+                "海兴县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "海兴县",
+                    "zipex": "061200",
+                    "id": "data/CN/河北省/沧州市/海兴县",
+                    "key": "海兴县",
+                    "lname": "Haixing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/海兴县"
+                },
+                "新华区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新华区",
+                    "zipex": "061000",
+                    "id": "data/CN/河北省/沧州市/新华区",
+                    "key": "新华区",
+                    "lname": "Xinhua Qu"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/新华区"
+                },
+                "任丘市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "任丘市",
+                    "zipex": "062550",
+                    "id": "data/CN/河北省/沧州市/任丘市",
+                    "key": "任丘市",
+                    "lname": "Renqiu Shi"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/任丘市"
+                },
+                "盐山县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "盐山县",
+                    "zipex": "061300",
+                    "id": "data/CN/河北省/沧州市/盐山县",
+                    "key": "盐山县",
+                    "lname": "Yanshan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/盐山县"
+                },
+                "南皮县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "南皮县",
+                    "zipex": "061500",
+                    "id": "data/CN/河北省/沧州市/南皮县",
+                    "key": "南皮县",
+                    "lname": "Nanpi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/南皮县"
+                },
+                "青县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "青县",
+                    "zipex": "062650",
+                    "id": "data/CN/河北省/沧州市/青县",
+                    "key": "青县",
+                    "lname": "Qing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/青县"
+                },
+                "献县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "献县",
+                    "zipex": "062250",
+                    "id": "data/CN/河北省/沧州市/献县",
+                    "key": "献县",
+                    "lname": "Xian Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/献县"
+                },
+                "河间市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "河间市",
+                    "zipex": "062450",
+                    "id": "data/CN/河北省/沧州市/河间市",
+                    "key": "河间市",
+                    "lname": "Hejian Shi"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/河间市"
+                },
+                "东光县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "东光县",
+                    "zipex": "061600",
+                    "id": "data/CN/河北省/沧州市/东光县",
+                    "key": "东光县",
+                    "lname": "Dongguang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/东光县"
+                },
+                "黄骅市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "黄骅市",
+                    "zipex": "061100",
+                    "id": "data/CN/河北省/沧州市/黄骅市",
+                    "key": "黄骅市",
+                    "lname": "Huanghua Shi"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/黄骅市"
+                },
+                "沧县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沧县",
+                    "zipex": "061000",
+                    "id": "data/CN/河北省/沧州市/沧县",
+                    "key": "沧县",
+                    "lname": "Cang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/沧县"
+                },
+                "肃宁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "肃宁县",
+                    "zipex": "062350",
+                    "id": "data/CN/河北省/沧州市/肃宁县",
+                    "key": "肃宁县",
+                    "lname": "Suning Xian"
+                  },
+                  "url": "/address/data/CN/河北省/沧州市/肃宁县"
+                }
+              }
+            },
+            "石家庄市": {
+              "details": {
+                "lang": "zh",
+                "name": "石家庄市",
+                "sub_keys": "高邑县~藁城区~晋州市~井陉矿区~井陉县~灵寿县~鹿泉区~栾城区~平山县~桥西区~深泽县~无极县~辛集市~新华区~新乐市~行唐县~裕华区~元氏县~赞皇县~长安区~赵县~正定县",
+                "sub_lnames": "Gaoyi Xian~Gaocheng Qu~Jinzhou Shi~Jingxing Kuangqu~Jingxing Xian~Lingshou Xian~Luquan Qu~Luancheng Qu~Pingshan Xian~Qiaoxi Qu~Shenze Xian~Wuji Xian~Xinji Shi~Xinhua Qu~Xinle Shi~Xingtang Xian~Yuhua Qu~Yuanshi Xian~Zanhuang Xian~Chang'an Qu~Zhao Xian~Zhengding Xian",
+                "zipex": "050011",
+                "id": "data/CN/河北省/石家庄市",
+                "sub_names": "高邑县~藁城区~晋州市~井陉矿区~井陉县~灵寿县~鹿泉区~栾城区~平山县~桥西区~深泽县~无极县~辛集市~新华区~新乐市~行唐县~裕华区~元氏县~赞皇县~长安区~赵县~正定县",
+                "key": "石家庄市",
+                "lname": "Shijiazhuang Shi",
+                "sub_zipexs": "051330~052160~052260~050100~050300~050500~050200~051430~050400~050051~052560~052460~052360~050051~050700~050600~050081~051130~051230~050011~051530~050800"
+              },
+              "url": "/address/data/CN/河北省/石家庄市",
+              "subs": {
+                "深泽县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "深泽县",
+                    "zipex": "052560",
+                    "id": "data/CN/河北省/石家庄市/深泽县",
+                    "key": "深泽县",
+                    "lname": "Shenze Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/深泽县"
+                },
+                "桥西区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桥西区",
+                    "zipex": "050051",
+                    "id": "data/CN/河北省/石家庄市/桥西区",
+                    "key": "桥西区",
+                    "lname": "Qiaoxi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/桥西区"
+                },
+                "赵县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "赵县",
+                    "zipex": "051530",
+                    "id": "data/CN/河北省/石家庄市/赵县",
+                    "key": "赵县",
+                    "lname": "Zhao Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/赵县"
+                },
+                "裕华区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "裕华区",
+                    "zipex": "050081",
+                    "id": "data/CN/河北省/石家庄市/裕华区",
+                    "key": "裕华区",
+                    "lname": "Yuhua Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/裕华区"
+                },
+                "新华区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新华区",
+                    "zipex": "050051",
+                    "id": "data/CN/河北省/石家庄市/新华区",
+                    "key": "新华区",
+                    "lname": "Xinhua Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/新华区"
+                },
+                "晋州市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "晋州市",
+                    "zipex": "052260",
+                    "id": "data/CN/河北省/石家庄市/晋州市",
+                    "key": "晋州市",
+                    "lname": "Jinzhou Shi"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/晋州市"
+                },
+                "赞皇县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "赞皇县",
+                    "zipex": "051230",
+                    "id": "data/CN/河北省/石家庄市/赞皇县",
+                    "key": "赞皇县",
+                    "lname": "Zanhuang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/赞皇县"
+                },
+                "行唐县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "行唐县",
+                    "zipex": "050600",
+                    "id": "data/CN/河北省/石家庄市/行唐县",
+                    "key": "行唐县",
+                    "lname": "Xingtang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/行唐县"
+                },
+                "正定县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "正定县",
+                    "zipex": "050800",
+                    "id": "data/CN/河北省/石家庄市/正定县",
+                    "key": "正定县",
+                    "lname": "Zhengding Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/正定县"
+                },
+                "藁城区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "藁城区",
+                    "zipex": "052160",
+                    "id": "data/CN/河北省/石家庄市/藁城区",
+                    "key": "藁城区",
+                    "lname": "Gaocheng Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/藁城区"
+                },
+                "无极县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "无极县",
+                    "zipex": "052460",
+                    "id": "data/CN/河北省/石家庄市/无极县",
+                    "key": "无极县",
+                    "lname": "Wuji Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/无极县"
+                },
+                "新乐市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新乐市",
+                    "zipex": "050700",
+                    "id": "data/CN/河北省/石家庄市/新乐市",
+                    "key": "新乐市",
+                    "lname": "Xinle Shi"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/新乐市"
+                },
+                "高邑县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "高邑县",
+                    "zipex": "051330",
+                    "id": "data/CN/河北省/石家庄市/高邑县",
+                    "key": "高邑县",
+                    "lname": "Gaoyi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/高邑县"
+                },
+                "井陉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "井陉县",
+                    "zipex": "050300",
+                    "id": "data/CN/河北省/石家庄市/井陉县",
+                    "key": "井陉县",
+                    "lname": "Jingxing Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/井陉县"
+                },
+                "平山县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "平山县",
+                    "zipex": "050400",
+                    "id": "data/CN/河北省/石家庄市/平山县",
+                    "key": "平山县",
+                    "lname": "Pingshan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/平山县"
+                },
+                "灵寿县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "灵寿县",
+                    "zipex": "050500",
+                    "id": "data/CN/河北省/石家庄市/灵寿县",
+                    "key": "灵寿县",
+                    "lname": "Lingshou Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/灵寿县"
+                },
+                "栾城区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "栾城区",
+                    "zipex": "051430",
+                    "id": "data/CN/河北省/石家庄市/栾城区",
+                    "key": "栾城区",
+                    "lname": "Luancheng Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/栾城区"
+                },
+                "辛集市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "辛集市",
+                    "zipex": "052360",
+                    "id": "data/CN/河北省/石家庄市/辛集市",
+                    "key": "辛集市",
+                    "lname": "Xinji Shi"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/辛集市"
+                },
+                "鹿泉区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "鹿泉区",
+                    "zipex": "050200",
+                    "id": "data/CN/河北省/石家庄市/鹿泉区",
+                    "key": "鹿泉区",
+                    "lname": "Luquan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/鹿泉区"
+                },
+                "长安区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "长安区",
+                    "zipex": "050011",
+                    "id": "data/CN/河北省/石家庄市/长安区",
+                    "key": "长安区",
+                    "lname": "Chang'an Qu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/长安区"
+                },
+                "元氏县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "元氏县",
+                    "zipex": "051130",
+                    "id": "data/CN/河北省/石家庄市/元氏县",
+                    "key": "元氏县",
+                    "lname": "Yuanshi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/元氏县"
+                },
+                "井陉矿区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "井陉矿区",
+                    "zipex": "050100",
+                    "id": "data/CN/河北省/石家庄市/井陉矿区",
+                    "key": "井陉矿区",
+                    "lname": "Jingxing Kuangqu"
+                  },
+                  "url": "/address/data/CN/河北省/石家庄市/井陉矿区"
+                }
+              }
+            },
+            "张家口市": {
+              "details": {
+                "lang": "zh",
+                "name": "张家口市",
+                "sub_keys": "赤城县~崇礼县~沽源县~怀安县~怀来县~康保县~桥东区~桥西区~尚义县~万全县~蔚县~下花园区~宣化区~宣化县~阳原县~张北县~涿鹿县",
+                "sub_lnames": "Chicheng Xian~Chongli Xian~Guyuan Xian~Huai'an Xian~Huailai Xian~Kangbao Xian~Qiaodong Qu~Qiaoxi Qu~Shangyi Xian~Wanquan Xian~Yu Xian~Xiahuayuan Qu~Xuanhua Qu~Xuanhua Xian~Yangyuan Xian~Zhangbei Xian~Zhuolu Xian",
+                "zipex": "075061",
+                "id": "data/CN/河北省/张家口市",
+                "sub_names": "赤城县~崇礼县~沽源县~怀安县~怀来县~康保县~桥东区~桥西区~尚义县~万全县~蔚县~下花园区~宣化区~宣化县~阳原县~张北县~涿鹿县",
+                "key": "张家口市",
+                "lname": "Zhangjiakou Shi",
+                "sub_zipexs": "075500~076350~076550~076150~075400~076650~075000~075061~076750~076250~075700~075300~075100~075100~075800~076450~075600"
+              },
+              "url": "/address/data/CN/河北省/张家口市",
+              "subs": {
+                "桥西区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桥西区",
+                    "zipex": "075061",
+                    "id": "data/CN/河北省/张家口市/桥西区",
+                    "key": "桥西区",
+                    "lname": "Qiaoxi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/桥西区"
+                },
+                "宣化区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "宣化区",
+                    "zipex": "075100",
+                    "id": "data/CN/河北省/张家口市/宣化区",
+                    "key": "宣化区",
+                    "lname": "Xuanhua Qu"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/宣化区"
+                },
+                "宣化县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "宣化县",
+                    "zipex": "075100",
+                    "id": "data/CN/河北省/张家口市/宣化县",
+                    "key": "宣化县",
+                    "lname": "Xuanhua Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/宣化县"
+                },
+                "下花园区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "下花园区",
+                    "zipex": "075300",
+                    "id": "data/CN/河北省/张家口市/下花园区",
+                    "key": "下花园区",
+                    "lname": "Xiahuayuan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/下花园区"
+                },
+                "蔚县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "蔚县",
+                    "zipex": "075700",
+                    "id": "data/CN/河北省/张家口市/蔚县",
+                    "key": "蔚县",
+                    "lname": "Yu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/蔚县"
+                },
+                "沽源县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沽源县",
+                    "zipex": "076550",
+                    "id": "data/CN/河北省/张家口市/沽源县",
+                    "key": "沽源县",
+                    "lname": "Guyuan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/沽源县"
+                },
+                "桥东区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桥东区",
+                    "zipex": "075000",
+                    "id": "data/CN/河北省/张家口市/桥东区",
+                    "key": "桥东区",
+                    "lname": "Qiaodong Qu"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/桥东区"
+                },
+                "涿鹿县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "涿鹿县",
+                    "zipex": "075600",
+                    "id": "data/CN/河北省/张家口市/涿鹿县",
+                    "key": "涿鹿县",
+                    "lname": "Zhuolu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/涿鹿县"
+                },
+                "尚义县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "尚义县",
+                    "zipex": "076750",
+                    "id": "data/CN/河北省/张家口市/尚义县",
+                    "key": "尚义县",
+                    "lname": "Shangyi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/尚义县"
+                },
+                "崇礼县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "崇礼县",
+                    "zipex": "076350",
+                    "id": "data/CN/河北省/张家口市/崇礼县",
+                    "key": "崇礼县",
+                    "lname": "Chongli Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/崇礼县"
+                },
+                "万全县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "万全县",
+                    "zipex": "076250",
+                    "id": "data/CN/河北省/张家口市/万全县",
+                    "key": "万全县",
+                    "lname": "Wanquan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/万全县"
+                },
+                "张北县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "张北县",
+                    "zipex": "076450",
+                    "id": "data/CN/河北省/张家口市/张北县",
+                    "key": "张北县",
+                    "lname": "Zhangbei Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/张北县"
+                },
+                "阳原县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "阳原县",
+                    "zipex": "075800",
+                    "id": "data/CN/河北省/张家口市/阳原县",
+                    "key": "阳原县",
+                    "lname": "Yangyuan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/阳原县"
+                },
+                "怀来县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "怀来县",
+                    "zipex": "075400",
+                    "id": "data/CN/河北省/张家口市/怀来县",
+                    "key": "怀来县",
+                    "lname": "Huailai Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/怀来县"
+                },
+                "怀安县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "怀安县",
+                    "zipex": "076150",
+                    "id": "data/CN/河北省/张家口市/怀安县",
+                    "key": "怀安县",
+                    "lname": "Huai'an Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/怀安县"
+                },
+                "康保县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "康保县",
+                    "zipex": "076650",
+                    "id": "data/CN/河北省/张家口市/康保县",
+                    "key": "康保县",
+                    "lname": "Kangbao Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/康保县"
+                },
+                "赤城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "赤城县",
+                    "zipex": "075500",
+                    "id": "data/CN/河北省/张家口市/赤城县",
+                    "key": "赤城县",
+                    "lname": "Chicheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/张家口市/赤城县"
+                }
+              }
+            },
+            "承德市": {
+              "details": {
+                "lang": "zh",
+                "name": "承德市",
+                "sub_keys": "承德县~丰宁满族自治县~宽城满族自治县~隆化县~滦平县~平泉县~双滦区~双桥区~围场满族蒙古族自治县~兴隆县~鹰手营子矿区",
+                "sub_lnames": "Chengde Xian~Fengning Xian~Kuancheng Xian~Longhua Xian~Luanping Xian~Pingquan Xian~Shuangluan Qu~Shuangqiao Qu~Weichang Xian~Xinglong Xian~Yingshouyingzi Kuangqu",
+                "zipex": "067000",
+                "id": "data/CN/河北省/承德市",
+                "sub_names": "承德县~丰宁县~宽城县~隆化县~滦平县~平泉县~双滦区~双桥区~围场县~兴隆县~鹰手营子矿区",
+                "key": "承德市",
+                "sub_lfnames": "~Fengning Manzu Zizhixian~Kuancheng Manzu Zizhixian~~~~~~Weichang Manzu Mongolzu Zizhixian~~",
+                "lname": "Chengde Shi",
+                "sub_zipexs": "067400~068350~067600~068150~068250~067500~067000~067000~068450~067300~067000"
+              },
+              "url": "/address/data/CN/河北省/承德市",
+              "subs": {
+                "双滦区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "双滦区",
+                    "zipex": "067000",
+                    "id": "data/CN/河北省/承德市/双滦区",
+                    "key": "双滦区",
+                    "lname": "Shuangluan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/双滦区"
+                },
+                "宽城满族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "宽城县",
+                    "zipex": "067600",
+                    "id": "data/CN/河北省/承德市/宽城满族自治县",
+                    "key": "宽城满族自治县",
+                    "lname": "Kuancheng Xian",
+                    "lfname": "Kuancheng Manzu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/宽城满族自治县"
+                },
+                "双桥区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "双桥区",
+                    "zipex": "067000",
+                    "id": "data/CN/河北省/承德市/双桥区",
+                    "key": "双桥区",
+                    "lname": "Shuangqiao Qu"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/双桥区"
+                },
+                "滦平县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "滦平县",
+                    "zipex": "068250",
+                    "id": "data/CN/河北省/承德市/滦平县",
+                    "key": "滦平县",
+                    "lname": "Luanping Xian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/滦平县"
+                },
+                "承德县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "承德县",
+                    "zipex": "067400",
+                    "id": "data/CN/河北省/承德市/承德县",
+                    "key": "承德县",
+                    "lname": "Chengde Xian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/承德县"
+                },
+                "鹰手营子矿区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "鹰手营子矿区",
+                    "zipex": "067000",
+                    "id": "data/CN/河北省/承德市/鹰手营子矿区",
+                    "key": "鹰手营子矿区",
+                    "lname": "Yingshouyingzi Kuangqu"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/鹰手营子矿区"
+                },
+                "平泉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "平泉县",
+                    "zipex": "067500",
+                    "id": "data/CN/河北省/承德市/平泉县",
+                    "key": "平泉县",
+                    "lname": "Pingquan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/平泉县"
+                },
+                "兴隆县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "兴隆县",
+                    "zipex": "067300",
+                    "id": "data/CN/河北省/承德市/兴隆县",
+                    "key": "兴隆县",
+                    "lname": "Xinglong Xian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/兴隆县"
+                },
+                "丰宁满族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "丰宁县",
+                    "zipex": "068350",
+                    "id": "data/CN/河北省/承德市/丰宁满族自治县",
+                    "key": "丰宁满族自治县",
+                    "lname": "Fengning Xian",
+                    "lfname": "Fengning Manzu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/丰宁满族自治县"
+                },
+                "围场满族蒙古族自治县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "围场县",
+                    "zipex": "068450",
+                    "id": "data/CN/河北省/承德市/围场满族蒙古族自治县",
+                    "key": "围场满族蒙古族自治县",
+                    "lname": "Weichang Xian",
+                    "lfname": "Weichang Manzu Mongolzu Zizhixian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/围场满族蒙古族自治县"
+                },
+                "隆化县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "隆化县",
+                    "zipex": "068150",
+                    "id": "data/CN/河北省/承德市/隆化县",
+                    "key": "隆化县",
+                    "lname": "Longhua Xian"
+                  },
+                  "url": "/address/data/CN/河北省/承德市/隆化县"
+                }
+              }
+            },
+            "邯郸市": {
+              "details": {
+                "lang": "zh",
+                "name": "邯郸市",
+                "sub_keys": "成安县~磁县~丛台区~大名县~肥乡县~峰峰矿区~复兴区~馆陶县~广平县~邯郸县~邯山区~鸡泽县~临漳县~邱县~曲周县~涉县~魏县~武安市~永年县",
+                "sub_lnames": "Cheng'an Xian~Ci Xian~Congtai Qu~Daming Xian~Feixiang Xian~Fengfeng Kuangqu~Fuxing Qu~Guantao Xian~Guangping Xian~Handan Xian~Hanshan Qu~Jize Xian~Linzhang Xian~Qiu Xian~Quzhou Xian~She Xian~Wei Xian~Wu'an Shi~Yongnian Xian",
+                "zipex": "056002",
+                "id": "data/CN/河北省/邯郸市",
+                "sub_names": "成安县~磁县~丛台区~大名县~肥乡县~峰峰矿区~复兴区~馆陶县~广平县~邯郸县~邯山区~鸡泽县~临漳县~邱县~曲周县~涉县~魏县~武安市~永年县",
+                "key": "邯郸市",
+                "lname": "Handan Shi",
+                "sub_zipexs": "056700~056600~056004~056900~057550~056200~056003~057750~057650~056100~056001~057350~056600~057450~057250~056500~056800~056300~057150"
+              },
+              "url": "/address/data/CN/河北省/邯郸市",
+              "subs": {
+                "涉县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "涉县",
+                    "zipex": "056500",
+                    "id": "data/CN/河北省/邯郸市/涉县",
+                    "key": "涉县",
+                    "lname": "She Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/涉县"
+                },
+                "成安县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "成安县",
+                    "zipex": "056700",
+                    "id": "data/CN/河北省/邯郸市/成安县",
+                    "key": "成安县",
+                    "lname": "Cheng'an Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/成安县"
+                },
+                "大名县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "大名县",
+                    "zipex": "056900",
+                    "id": "data/CN/河北省/邯郸市/大名县",
+                    "key": "大名县",
+                    "lname": "Daming Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/大名县"
+                },
+                "永年县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "永年县",
+                    "zipex": "057150",
+                    "id": "data/CN/河北省/邯郸市/永年县",
+                    "key": "永年县",
+                    "lname": "Yongnian Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/永年县"
+                },
+                "邯郸县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "邯郸县",
+                    "zipex": "056100",
+                    "id": "data/CN/河北省/邯郸市/邯郸县",
+                    "key": "邯郸县",
+                    "lname": "Handan Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/邯郸县"
+                },
+                "肥乡县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "肥乡县",
+                    "zipex": "057550",
+                    "id": "data/CN/河北省/邯郸市/肥乡县",
+                    "key": "肥乡县",
+                    "lname": "Feixiang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/肥乡县"
+                },
+                "馆陶县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "馆陶县",
+                    "zipex": "057750",
+                    "id": "data/CN/河北省/邯郸市/馆陶县",
+                    "key": "馆陶县",
+                    "lname": "Guantao Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/馆陶县"
+                },
+                "广平县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "广平县",
+                    "zipex": "057650",
+                    "id": "data/CN/河北省/邯郸市/广平县",
+                    "key": "广平县",
+                    "lname": "Guangping Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/广平县"
+                },
+                "复兴区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "复兴区",
+                    "zipex": "056003",
+                    "id": "data/CN/河北省/邯郸市/复兴区",
+                    "key": "复兴区",
+                    "lname": "Fuxing Qu"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/复兴区"
+                },
+                "曲周县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "曲周县",
+                    "zipex": "057250",
+                    "id": "data/CN/河北省/邯郸市/曲周县",
+                    "key": "曲周县",
+                    "lname": "Quzhou Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/曲周县"
+                },
+                "武安市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "武安市",
+                    "zipex": "056300",
+                    "id": "data/CN/河北省/邯郸市/武安市",
+                    "key": "武安市",
+                    "lname": "Wu'an Shi"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/武安市"
+                },
+                "魏县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "魏县",
+                    "zipex": "056800",
+                    "id": "data/CN/河北省/邯郸市/魏县",
+                    "key": "魏县",
+                    "lname": "Wei Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/魏县"
+                },
+                "峰峰矿区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "峰峰矿区",
+                    "zipex": "056200",
+                    "id": "data/CN/河北省/邯郸市/峰峰矿区",
+                    "key": "峰峰矿区",
+                    "lname": "Fengfeng Kuangqu"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/峰峰矿区"
+                },
+                "丛台区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "丛台区",
+                    "zipex": "056004",
+                    "id": "data/CN/河北省/邯郸市/丛台区",
+                    "key": "丛台区",
+                    "lname": "Congtai Qu"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/丛台区"
+                },
+                "临漳县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "临漳县",
+                    "zipex": "056600",
+                    "id": "data/CN/河北省/邯郸市/临漳县",
+                    "key": "临漳县",
+                    "lname": "Linzhang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/临漳县"
+                },
+                "鸡泽县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "鸡泽县",
+                    "zipex": "057350",
+                    "id": "data/CN/河北省/邯郸市/鸡泽县",
+                    "key": "鸡泽县",
+                    "lname": "Jize Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/鸡泽县"
+                },
+                "邯山区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "邯山区",
+                    "zipex": "056001",
+                    "id": "data/CN/河北省/邯郸市/邯山区",
+                    "key": "邯山区",
+                    "lname": "Hanshan Qu"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/邯山区"
+                },
+                "磁县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "磁县",
+                    "zipex": "056600",
+                    "id": "data/CN/河北省/邯郸市/磁县",
+                    "key": "磁县",
+                    "lname": "Ci Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/磁县"
+                },
+                "邱县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "邱县",
+                    "zipex": "057450",
+                    "id": "data/CN/河北省/邯郸市/邱县",
+                    "key": "邱县",
+                    "lname": "Qiu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邯郸市/邱县"
+                }
+              }
+            },
+            "邢台市": {
+              "details": {
+                "lang": "zh",
+                "name": "邢台市",
+                "sub_keys": "柏乡县~广宗县~巨鹿县~临城县~临西县~隆尧县~南宫市~南和县~内丘县~宁晋县~平乡县~桥东区~桥西区~清河县~任县~沙河市~威县~新河县~邢台县",
+                "sub_lnames": "Baixiang Xian~Guangzong Xian~Julu Xian~Lincheng Xian~Linxi Xian~Longyao Xian~Nangong Shi~Nanhe Xian~Neiqiu Xian~Ningjin Xian~Pingxiang Xian~Qiaodong Qu~Qiaoxi Qu~Qinghe Xian~Ren Xian~Shahe Shi~Wei Xian~Xinhe Xian~Xingtai Xian",
+                "zipex": "054001",
+                "id": "data/CN/河北省/邢台市",
+                "sub_names": "柏乡县~广宗县~巨鹿县~临城县~临西县~隆尧县~南宫市~南和县~内丘县~宁晋县~平乡县~桥东区~桥西区~清河县~任县~沙河市~威县~新河县~邢台县",
+                "key": "邢台市",
+                "lname": "Xingtai Shi",
+                "sub_zipexs": "055450~054600~055250~054300~054900~055350~055750~054400~054200~055550~054500~054001~054000~054800~055150~054100~054700~051730~054001"
+              },
+              "url": "/address/data/CN/河北省/邢台市",
+              "subs": {
+                "柏乡县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "柏乡县",
+                    "zipex": "055450",
+                    "id": "data/CN/河北省/邢台市/柏乡县",
+                    "key": "柏乡县",
+                    "lname": "Baixiang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/柏乡县"
+                },
+                "任县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "任县",
+                    "zipex": "055150",
+                    "id": "data/CN/河北省/邢台市/任县",
+                    "key": "任县",
+                    "lname": "Ren Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/任县"
+                },
+                "桥西区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桥西区",
+                    "zipex": "054000",
+                    "id": "data/CN/河北省/邢台市/桥西区",
+                    "key": "桥西区",
+                    "lname": "Qiaoxi Qu"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/桥西区"
+                },
+                "隆尧县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "隆尧县",
+                    "zipex": "055350",
+                    "id": "data/CN/河北省/邢台市/隆尧县",
+                    "key": "隆尧县",
+                    "lname": "Longyao Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/隆尧县"
+                },
+                "清河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "清河县",
+                    "zipex": "054800",
+                    "id": "data/CN/河北省/邢台市/清河县",
+                    "key": "清河县",
+                    "lname": "Qinghe Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/清河县"
+                },
+                "南和县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "南和县",
+                    "zipex": "054400",
+                    "id": "data/CN/河北省/邢台市/南和县",
+                    "key": "南和县",
+                    "lname": "Nanhe Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/南和县"
+                },
+                "新河县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "新河县",
+                    "zipex": "051730",
+                    "id": "data/CN/河北省/邢台市/新河县",
+                    "key": "新河县",
+                    "lname": "Xinhe Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/新河县"
+                },
+                "内丘县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "内丘县",
+                    "zipex": "054200",
+                    "id": "data/CN/河北省/邢台市/内丘县",
+                    "key": "内丘县",
+                    "lname": "Neiqiu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/内丘县"
+                },
+                "临西县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "临西县",
+                    "zipex": "054900",
+                    "id": "data/CN/河北省/邢台市/临西县",
+                    "key": "临西县",
+                    "lname": "Linxi Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/临西县"
+                },
+                "桥东区": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "桥东区",
+                    "zipex": "054001",
+                    "id": "data/CN/河北省/邢台市/桥东区",
+                    "key": "桥东区",
+                    "lname": "Qiaodong Qu"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/桥东区"
+                },
+                "宁晋县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "宁晋县",
+                    "zipex": "055550",
+                    "id": "data/CN/河北省/邢台市/宁晋县",
+                    "key": "宁晋县",
+                    "lname": "Ningjin Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/宁晋县"
+                },
+                "威县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "威县",
+                    "zipex": "054700",
+                    "id": "data/CN/河北省/邢台市/威县",
+                    "key": "威县",
+                    "lname": "Wei Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/威县"
+                },
+                "巨鹿县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "巨鹿县",
+                    "zipex": "055250",
+                    "id": "data/CN/河北省/邢台市/巨鹿县",
+                    "key": "巨鹿县",
+                    "lname": "Julu Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/巨鹿县"
+                },
+                "沙河市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "沙河市",
+                    "zipex": "054100",
+                    "id": "data/CN/河北省/邢台市/沙河市",
+                    "key": "沙河市",
+                    "lname": "Shahe Shi"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/沙河市"
+                },
+                "临城县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "临城县",
+                    "zipex": "054300",
+                    "id": "data/CN/河北省/邢台市/临城县",
+                    "key": "临城县",
+                    "lname": "Lincheng Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/临城县"
+                },
+                "南宫市": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "南宫市",
+                    "zipex": "055750",
+                    "id": "data/CN/河北省/邢台市/南宫市",
+                    "key": "南宫市",
+                    "lname": "Nangong Shi"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/南宫市"
+                },
+                "邢台县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "邢台县",
+                    "zipex": "054001",
+                    "id": "data/CN/河北省/邢台市/邢台县",
+                    "key": "邢台县",
+                    "lname": "Xingtai Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/邢台县"
+                },
+                "广宗县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "广宗县",
+                    "zipex": "054600",
+                    "id": "data/CN/河北省/邢台市/广宗县",
+                    "key": "广宗县",
+                    "lname": "Guangzong Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/广宗县"
+                },
+                "平乡县": {
+                  "details": {
+                    "lang": "zh",
+                    "name": "平乡县",
+                    "zipex": "054500",
+                    "id": "data/CN/河北省/邢台市/平乡县",
+                    "key": "平乡县",
+                    "lname": "Pingxiang Xian"
+                  },
+                  "url": "/address/data/CN/河北省/邢台市/平乡县"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "US": {
+      "details": {
+        "lang": "en",
+        "fmt": "%N%n%O%n%A%n%C, %S %Z",
+        "sub_names": "Alabama~Alaska~American Samoa~Arizona~Arkansas~Armed Forces (AA)~Armed Forces (AE)~Armed Forces (AP)~California~Colorado~Connecticut~Delaware~District of Columbia~Florida~Georgia~Guam~Hawaii~Idaho~Illinois~Indiana~Iowa~Kansas~Kentucky~Louisiana~Maine~Marshall Islands~Maryland~Massachusetts~Michigan~Micronesia~Minnesota~Mississippi~Missouri~Montana~Nebraska~Nevada~New Hampshire~New Jersey~New Mexico~New York~North Carolina~North Dakota~Northern Mariana Islands~Ohio~Oklahoma~Oregon~Palau~Pennsylvania~Puerto Rico~Rhode Island~South Carolina~South Dakota~Tennessee~Texas~Utah~Vermont~Virgin Islands~Virginia~Washington~West Virginia~Wisconsin~Wyoming",
+        "zipex": "95014,22162-1010",
+        "id": "data/US",
+        "key": "US",
+        "languages": "en",
+        "state_name_type": "state",
+        "zip_name_type": "zip",
+        "sub_zips": "3[56]~99[5-9]~96799~8[56]~71[6-9]|72~340~09~96[2-6]~9[0-5]|96[01]~8[01]~06~19[7-9]~20[02-5]|569~3[23]|34[1-9]~3[01]|398|39901~969([1-2]\\d|3[12])~967[0-8]|9679[0-8]|968~83[2-9]~6[0-2]~4[67]~5[0-2]~6[67]~4[01]|42[0-7]~70|71[0-5]~039|04~969[67]~20[6-9]|21~01|02[0-7]|05501|05544~4[89]~9694[1-4]~55|56[0-7]~38[6-9]|39[0-7]~6[3-5]~59~6[89]~889|89~03[0-8]~0[78]~87|88[0-4]~1[0-4]|06390|00501|00544~2[78]~58~9695[0-2]~4[3-5]~7[34]~97~969(39|40)~1[5-8]|19[0-6]~00[679]~02[89]~29~57~37|38[0-5]~7[5-9]|885|73301|73344~84~05~008~201|2[23]|24[0-6]~98|99[0-4]~24[7-9]|2[56]~5[34]~82|83[01]|83414",
+        "sub_keys": "AL~AK~AS~AZ~AR~AA~AE~AP~CA~CO~CT~DE~DC~FL~GA~GU~HI~ID~IL~IN~IA~KS~KY~LA~ME~MH~MD~MA~MI~FM~MN~MS~MO~MT~NE~NV~NH~NJ~NM~NY~NC~ND~MP~OH~OK~OR~PW~PA~PR~RI~SC~SD~TN~TX~UT~VT~VI~VA~WA~WV~WI~WY",
+        "upper": "CS",
+        "name": "UNITED STATES",
+        "require": "ACSZ",
+        "posturl": "https://tools.usps.com/go/ZipLookupAction!input.action",
+        "zip": "(\\d{5})(?:[ \\-](\\d{4}))?",
+        "sub_zipexs": "35000,36999~99500,99999~96799~85000,86999~71600,72999~34000,34099~09000,09999~96200,96699~90000,96199~80000,81999~06000,06999~19700,19999~20000,20099:20200,20599:56900,56999~32000,33999:34100,34999~30000,31999:39800,39899:39901~96910,96932~96700,96798:96800,96899~83200,83999~60000,62999~46000,47999~50000,52999~66000,67999~40000,42799~70000,71599~03900,04999~96960,96979~20600,21999~01000,02799:05501:05544~48000,49999~96941,96944~55000,56799~38600,39799~63000,65999~59000,59999~68000,69999~88900,89999~03000,03899~07000,08999~87000,88499~10000,14999:06390:00501:00544~27000,28999~58000,58999~96950,96952~43000,45999~73000,74999~97000,97999~96940~15000,19699~00600,00799:00900,00999~02800,02999~29000,29999~57000,57999~37000,38599~75000,79999:88500,88599:73301:73344~84000,84999~05000,05999~00800,00899~20100,20199:22000,24699~98000,99499~24700,26999~53000,54999~82000,83199:83414"
+      },
+      "url": "/address/data/US",
+      "subs": {
+        "NC": {
+          "details": {
+            "lang": "en",
+            "name": "North Carolina",
+            "key": "NC",
+            "zipex": "27000,28999",
+            "id": "data/US/NC",
+            "zip": "2[78]"
+          },
+          "url": "/address/data/US/NC"
+        },
+        "CO": {
+          "details": {
+            "lang": "en",
+            "name": "Colorado",
+            "key": "CO",
+            "zipex": "80000,81999",
+            "id": "data/US/CO",
+            "zip": "8[01]"
+          },
+          "url": "/address/data/US/CO"
+        },
+        "FM": {
+          "details": {
+            "lang": "en",
+            "name": "Micronesia",
+            "key": "FM",
+            "zipex": "96941,96944",
+            "id": "data/US/FM",
+            "zip": "9694[1-4]"
+          },
+          "url": "/address/data/US/FM"
+        },
+        "SC": {
+          "details": {
+            "lang": "en",
+            "name": "South Carolina",
+            "key": "SC",
+            "zipex": "29000,29999",
+            "id": "data/US/SC",
+            "zip": "29"
+          },
+          "url": "/address/data/US/SC"
+        },
+        "AL": {
+          "details": {
+            "lang": "en",
+            "name": "Alabama",
+            "key": "AL",
+            "zipex": "35000,36999",
+            "id": "data/US/AL",
+            "zip": "3[56]"
+          },
+          "url": "/address/data/US/AL"
+        },
+        "KY": {
+          "details": {
+            "lang": "en",
+            "name": "Kentucky",
+            "key": "KY",
+            "zipex": "40000,42799",
+            "id": "data/US/KY",
+            "zip": "4[01]|42[0-7]"
+          },
+          "url": "/address/data/US/KY"
+        },
+        "WI": {
+          "details": {
+            "lang": "en",
+            "name": "Wisconsin",
+            "key": "WI",
+            "zipex": "53000,54999",
+            "id": "data/US/WI",
+            "zip": "5[34]"
+          },
+          "url": "/address/data/US/WI"
+        },
+        "MI": {
+          "details": {
+            "lang": "en",
+            "name": "Michigan",
+            "key": "MI",
+            "zipex": "48000,49999",
+            "id": "data/US/MI",
+            "zip": "4[89]"
+          },
+          "url": "/address/data/US/MI"
+        },
+        "AA": {
+          "details": {
+            "lang": "en",
+            "name": "Armed Forces (AA)",
+            "key": "AA",
+            "zipex": "34000,34099",
+            "id": "data/US/AA",
+            "zip": "340"
+          },
+          "url": "/address/data/US/AA"
+        },
+        "NH": {
+          "details": {
+            "lang": "en",
+            "name": "New Hampshire",
+            "key": "NH",
+            "zipex": "03000,03899",
+            "id": "data/US/NH",
+            "zip": "03[0-8]"
+          },
+          "url": "/address/data/US/NH"
+        },
+        "MN": {
+          "details": {
+            "lang": "en",
+            "name": "Minnesota",
+            "key": "MN",
+            "zipex": "55000,56799",
+            "id": "data/US/MN",
+            "zip": "55|56[0-7]"
+          },
+          "url": "/address/data/US/MN"
+        },
+        "RI": {
+          "details": {
+            "lang": "en",
+            "name": "Rhode Island",
+            "key": "RI",
+            "zipex": "02800,02999",
+            "id": "data/US/RI",
+            "zip": "02[89]"
+          },
+          "url": "/address/data/US/RI"
+        },
+        "GA": {
+          "details": {
+            "lang": "en",
+            "name": "Georgia",
+            "key": "GA",
+            "zipex": "30000,31999:39800,39899:39901",
+            "id": "data/US/GA",
+            "zip": "3[01]|398|39901"
+          },
+          "url": "/address/data/US/GA"
+        },
+        "ID": {
+          "details": {
+            "lang": "en",
+            "name": "Idaho",
+            "key": "ID",
+            "zipex": "83200,83999",
+            "id": "data/US/ID",
+            "zip": "83[2-9]"
+          },
+          "url": "/address/data/US/ID"
+        },
+        "NJ": {
+          "details": {
+            "lang": "en",
+            "name": "New Jersey",
+            "key": "NJ",
+            "zipex": "07000,08999",
+            "id": "data/US/NJ",
+            "zip": "0[78]"
+          },
+          "url": "/address/data/US/NJ"
+        },
+        "MT": {
+          "details": {
+            "lang": "en",
+            "name": "Montana",
+            "key": "MT",
+            "zipex": "59000,59999",
+            "id": "data/US/MT",
+            "zip": "59"
+          },
+          "url": "/address/data/US/MT"
+        },
+        "GU": {
+          "details": {
+            "lang": "en",
+            "name": "Guam",
+            "key": "GU",
+            "zipex": "96910,96932",
+            "id": "data/US/GU",
+            "zip": "969([1-2]\\d|3[12])"
+          },
+          "url": "/address/data/US/GU"
+        },
+        "AS": {
+          "details": {
+            "lang": "en",
+            "name": "American Samoa",
+            "key": "AS",
+            "zipex": "96799",
+            "id": "data/US/AS",
+            "zip": "96799"
+          },
+          "url": "/address/data/US/AS"
+        },
+        "PA": {
+          "details": {
+            "lang": "en",
+            "name": "Pennsylvania",
+            "key": "PA",
+            "zipex": "15000,19699",
+            "id": "data/US/PA",
+            "zip": "1[5-8]|19[0-6]"
+          },
+          "url": "/address/data/US/PA"
+        },
+        "CT": {
+          "details": {
+            "lang": "en",
+            "name": "Connecticut",
+            "key": "CT",
+            "zipex": "06000,06999",
+            "id": "data/US/CT",
+            "zip": "06"
+          },
+          "url": "/address/data/US/CT"
+        },
+        "VI": {
+          "details": {
+            "lang": "en",
+            "name": "Virgin Islands",
+            "key": "VI",
+            "zipex": "00800,00899",
+            "id": "data/US/VI",
+            "zip": "008"
+          },
+          "url": "/address/data/US/VI"
+        },
+        "NM": {
+          "details": {
+            "lang": "en",
+            "name": "New Mexico",
+            "key": "NM",
+            "zipex": "87000,88499",
+            "id": "data/US/NM",
+            "zip": "87|88[0-4]"
+          },
+          "url": "/address/data/US/NM"
+        },
+        "FL": {
+          "details": {
+            "lang": "en",
+            "name": "Florida",
+            "key": "FL",
+            "zipex": "32000,33999:34100,34999",
+            "id": "data/US/FL",
+            "zip": "3[23]|34[1-9]"
+          },
+          "url": "/address/data/US/FL"
+        },
+        "DE": {
+          "details": {
+            "lang": "en",
+            "name": "Delaware",
+            "key": "DE",
+            "zipex": "19700,19999",
+            "id": "data/US/DE",
+            "zip": "19[7-9]"
+          },
+          "url": "/address/data/US/DE"
+        },
+        "NY": {
+          "details": {
+            "lang": "en",
+            "name": "New York",
+            "key": "NY",
+            "zipex": "10000,14999:06390:00501:00544",
+            "id": "data/US/NY",
+            "zip": "1[0-4]|06390|00501|00544"
+          },
+          "url": "/address/data/US/NY"
+        },
+        "AP": {
+          "details": {
+            "lang": "en",
+            "name": "Armed Forces (AP)",
+            "key": "AP",
+            "zipex": "96200,96699",
+            "id": "data/US/AP",
+            "zip": "96[2-6]"
+          },
+          "url": "/address/data/US/AP"
+        },
+        "KS": {
+          "details": {
+            "lang": "en",
+            "name": "Kansas",
+            "key": "KS",
+            "zipex": "66000,67999",
+            "id": "data/US/KS",
+            "zip": "6[67]"
+          },
+          "url": "/address/data/US/KS"
+        },
+        "OR": {
+          "details": {
+            "lang": "en",
+            "name": "Oregon",
+            "key": "OR",
+            "zipex": "97000,97999",
+            "id": "data/US/OR",
+            "zip": "97"
+          },
+          "url": "/address/data/US/OR"
+        },
+        "AE": {
+          "details": {
+            "lang": "en",
+            "name": "Armed Forces (AE)",
+            "key": "AE",
+            "zipex": "09000,09999",
+            "id": "data/US/AE",
+            "zip": "09"
+          },
+          "url": "/address/data/US/AE"
+        },
+        "ND": {
+          "details": {
+            "lang": "en",
+            "name": "North Dakota",
+            "key": "ND",
+            "zipex": "58000,58999",
+            "id": "data/US/ND",
+            "zip": "58"
+          },
+          "url": "/address/data/US/ND"
+        },
+        "VT": {
+          "details": {
+            "lang": "en",
+            "name": "Vermont",
+            "key": "VT",
+            "zipex": "05000,05999",
+            "id": "data/US/VT",
+            "zip": "05"
+          },
+          "url": "/address/data/US/VT"
+        },
+        "IN": {
+          "details": {
+            "lang": "en",
+            "name": "Indiana",
+            "key": "IN",
+            "zipex": "46000,47999",
+            "id": "data/US/IN",
+            "zip": "4[67]"
+          },
+          "url": "/address/data/US/IN"
+        },
+        "LA": {
+          "details": {
+            "lang": "en",
+            "name": "Louisiana",
+            "key": "LA",
+            "zipex": "70000,71599",
+            "id": "data/US/LA",
+            "zip": "70|71[0-5]"
+          },
+          "url": "/address/data/US/LA"
+        },
+        "AZ": {
+          "details": {
+            "lang": "en",
+            "name": "Arizona",
+            "key": "AZ",
+            "zipex": "85000,86999",
+            "id": "data/US/AZ",
+            "zip": "8[56]"
+          },
+          "url": "/address/data/US/AZ"
+        },
+        "PW": {
+          "details": {
+            "lang": "en",
+            "name": "Palau",
+            "key": "PW",
+            "zipex": "96940",
+            "id": "data/US/PW",
+            "zip": "969(39|40)"
+          },
+          "url": "/address/data/US/PW"
+        },
+        "IL": {
+          "details": {
+            "lang": "en",
+            "name": "Illinois",
+            "key": "IL",
+            "zipex": "60000,62999",
+            "id": "data/US/IL",
+            "zip": "6[0-2]"
+          },
+          "url": "/address/data/US/IL"
+        },
+        "MO": {
+          "details": {
+            "lang": "en",
+            "name": "Missouri",
+            "key": "MO",
+            "zipex": "63000,65999",
+            "id": "data/US/MO",
+            "zip": "6[3-5]"
+          },
+          "url": "/address/data/US/MO"
+        },
+        "WY": {
+          "details": {
+            "lang": "en",
+            "name": "Wyoming",
+            "key": "WY",
+            "zipex": "82000,83199:83414",
+            "id": "data/US/WY",
+            "zip": "82|83[01]|83414"
+          },
+          "url": "/address/data/US/WY"
+        },
+        "WA": {
+          "details": {
+            "lang": "en",
+            "name": "Washington",
+            "key": "WA",
+            "zipex": "98000,99499",
+            "id": "data/US/WA",
+            "zip": "98|99[0-4]"
+          },
+          "url": "/address/data/US/WA"
+        },
+        "ME": {
+          "details": {
+            "lang": "en",
+            "name": "Maine",
+            "key": "ME",
+            "zipex": "03900,04999",
+            "id": "data/US/ME",
+            "zip": "039|04"
+          },
+          "url": "/address/data/US/ME"
+        },
+        "PR": {
+          "details": {
+            "lang": "en",
+            "name": "Puerto Rico",
+            "key": "PR",
+            "zipex": "00600,00799:00900,00999",
+            "id": "data/US/PR",
+            "zip": "00[679]"
+          },
+          "url": "/address/data/US/PR"
+        },
+        "VA": {
+          "details": {
+            "lang": "en",
+            "name": "Virginia",
+            "key": "VA",
+            "zipex": "20100,20199:22000,24699",
+            "id": "data/US/VA",
+            "zip": "201|2[23]|24[0-6]"
+          },
+          "url": "/address/data/US/VA"
+        },
+        "MS": {
+          "details": {
+            "lang": "en",
+            "name": "Mississippi",
+            "key": "MS",
+            "zipex": "38600,39799",
+            "id": "data/US/MS",
+            "zip": "38[6-9]|39[0-7]"
+          },
+          "url": "/address/data/US/MS"
+        },
+        "OK": {
+          "details": {
+            "lang": "en",
+            "name": "Oklahoma",
+            "key": "OK",
+            "zipex": "73000,74999",
+            "id": "data/US/OK",
+            "zip": "7[34]"
+          },
+          "url": "/address/data/US/OK"
+        },
+        "UT": {
+          "details": {
+            "lang": "en",
+            "name": "Utah",
+            "key": "UT",
+            "zipex": "84000,84999",
+            "id": "data/US/UT",
+            "zip": "84"
+          },
+          "url": "/address/data/US/UT"
+        },
+        "DC": {
+          "details": {
+            "lang": "en",
+            "name": "District of Columbia",
+            "key": "DC",
+            "zipex": "20000,20099:20200,20599:56900,56999",
+            "id": "data/US/DC",
+            "zip": "20[02-5]|569"
+          },
+          "url": "/address/data/US/DC"
+        },
+        "AR": {
+          "details": {
+            "lang": "en",
+            "name": "Arkansas",
+            "key": "AR",
+            "zipex": "71600,72999",
+            "id": "data/US/AR",
+            "zip": "71[6-9]|72"
+          },
+          "url": "/address/data/US/AR"
+        },
+        "AK": {
+          "details": {
+            "lang": "en",
+            "name": "Alaska",
+            "key": "AK",
+            "zipex": "99500,99999",
+            "id": "data/US/AK",
+            "zip": "99[5-9]"
+          },
+          "url": "/address/data/US/AK"
+        },
+        "IA": {
+          "details": {
+            "lang": "en",
+            "name": "Iowa",
+            "key": "IA",
+            "zipex": "50000,52999",
+            "id": "data/US/IA",
+            "zip": "5[0-2]"
+          },
+          "url": "/address/data/US/IA"
+        },
+        "MA": {
+          "details": {
+            "lang": "en",
+            "name": "Massachusetts",
+            "key": "MA",
+            "zipex": "01000,02799:05501:05544",
+            "id": "data/US/MA",
+            "zip": "01|02[0-7]|05501|05544"
+          },
+          "url": "/address/data/US/MA"
+        },
+        "MP": {
+          "details": {
+            "lang": "en",
+            "name": "Northern Mariana Islands",
+            "key": "MP",
+            "zipex": "96950,96952",
+            "id": "data/US/MP",
+            "zip": "9695[0-2]"
+          },
+          "url": "/address/data/US/MP"
+        },
+        "CA": {
+          "details": {
+            "lang": "en",
+            "name": "California",
+            "key": "CA",
+            "zipex": "90000,96199",
+            "id": "data/US/CA",
+            "zip": "9[0-5]|96[01]"
+          },
+          "url": "/address/data/US/CA"
+        },
+        "MD": {
+          "details": {
+            "lang": "en",
+            "name": "Maryland",
+            "key": "MD",
+            "zipex": "20600,21999",
+            "id": "data/US/MD",
+            "zip": "20[6-9]|21"
+          },
+          "url": "/address/data/US/MD"
+        },
+        "MH": {
+          "details": {
+            "lang": "en",
+            "name": "Marshall Islands",
+            "key": "MH",
+            "zipex": "96960,96979",
+            "id": "data/US/MH",
+            "zip": "969[67]"
+          },
+          "url": "/address/data/US/MH"
+        },
+        "NE": {
+          "details": {
+            "lang": "en",
+            "name": "Nebraska",
+            "key": "NE",
+            "zipex": "68000,69999",
+            "id": "data/US/NE",
+            "zip": "6[89]"
+          },
+          "url": "/address/data/US/NE"
+        },
+        "WV": {
+          "details": {
+            "lang": "en",
+            "name": "West Virginia",
+            "key": "WV",
+            "zipex": "24700,26999",
+            "id": "data/US/WV",
+            "zip": "24[7-9]|2[56]"
+          },
+          "url": "/address/data/US/WV"
+        },
+        "TX": {
+          "details": {
+            "lang": "en",
+            "name": "Texas",
+            "key": "TX",
+            "zipex": "75000,79999:88500,88599:73301:73344",
+            "id": "data/US/TX",
+            "zip": "7[5-9]|885|73301|73344"
+          },
+          "url": "/address/data/US/TX"
+        },
+        "SD": {
+          "details": {
+            "lang": "en",
+            "name": "South Dakota",
+            "key": "SD",
+            "zipex": "57000,57999",
+            "id": "data/US/SD",
+            "zip": "57"
+          },
+          "url": "/address/data/US/SD"
+        },
+        "OH": {
+          "details": {
+            "lang": "en",
+            "name": "Ohio",
+            "key": "OH",
+            "zipex": "43000,45999",
+            "id": "data/US/OH",
+            "zip": "4[3-5]"
+          },
+          "url": "/address/data/US/OH"
+        },
+        "NV": {
+          "details": {
+            "lang": "en",
+            "name": "Nevada",
+            "key": "NV",
+            "zipex": "88900,89999",
+            "id": "data/US/NV",
+            "zip": "889|89"
+          },
+          "url": "/address/data/US/NV"
+        },
+        "TN": {
+          "details": {
+            "lang": "en",
+            "name": "Tennessee",
+            "key": "TN",
+            "zipex": "37000,38599",
+            "id": "data/US/TN",
+            "zip": "37|38[0-5]"
+          },
+          "url": "/address/data/US/TN"
+        },
+        "HI": {
+          "details": {
+            "lang": "en",
+            "name": "Hawaii",
+            "key": "HI",
+            "zipex": "96700,96798:96800,96899",
+            "id": "data/US/HI",
+            "zip": "967[0-8]|9679[0-8]|968"
+          },
+          "url": "/address/data/US/HI"
+        }
+      }
+    }
+  }
+}
