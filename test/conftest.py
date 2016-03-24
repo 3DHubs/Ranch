@@ -1,23 +1,23 @@
 import json
 import pytest
-import addressing as ranch  # ranch is a dressing… get it?
+import ranch as addressing
 
 
 @pytest.fixture
-def addressing():
-    return ranch
+def ranch():
+    return addressing
 
 
 @pytest.fixture
 def AddressParts():
-    return ranch.AddressParts
+    return addressing.AddressParts
 
 
 @pytest.fixture
 def address():
     with open('test/data.json', 'r') as js:
         data = json.load(js)
-    return ranch.Address(data)
+    return addressing.Address(data)
 
 
 @pytest.fixture

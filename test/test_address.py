@@ -28,16 +28,16 @@ def test_set_city(AddressParts, address_china):
     assert address_china.get_specs()["zipex"] == '750001'
 
 
-def test_postal_code(addressing, AddressParts, address):
+def test_postal_code(ranch, AddressParts, address):
     address.set_field(AddressParts.country, 'CA')
     address.set_field(AddressParts.admin_area, 'NT')
     address.set_field(AddressParts.postal_code, 'X0E 2Y7')
 
 
-def test_invalid_postal_code(addressing, AddressParts, address_canada):
+def test_invalid_postal_code(ranch, AddressParts, address_canada):
     address = address_canada
 
-    with pytest.raises(addressing.InvalidAddressException) as excinfo:
+    with pytest.raises(ranch.InvalidAddressException) as excinfo:
         address.set_field(AddressParts.postal_code, 'H3Z 2Y7')
 
     assert str(excinfo.value) == 'Invalid postal code'
