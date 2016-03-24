@@ -1,0 +1,125 @@
+from concurrent.futures import ThreadPoolExecutor
+from functools import partial
+from pprint import pprint
+import json
+
+from bs4 import BeautifulSoup
+from progressbar import ProgressBar
+import requests
+import percache
+
+
+def get_uri(uri):
+    r = requests.get(uri)
+    return r.text
+
+
+def get_json(uri):
+    r = requests.get(uri)
+    return r.json()
+
+
+class Downloader(object):
+    def __init__(self, base_url, entry, query, defaults=None, cache=None):
+        self.base_url = base_url
+        self.defaults_url = defaults
+        self.entry = entry
+        self.query = query
+        self.data = {}
+
+        self.endpoints_total = 0
+
+        if cache:
+            self._get_uri = cache(get_uri)
+            self._get_json = cache(get_json)
+        else:
+            self._get_uri = get_uri
+            self._get_json = get_json
+
+    def _download_list(self):
+        page = self._get_uri(self.base_url + self.entry)
+        self.page = BeautifulSoup(page, 'html.parser')
+
+    def _download_endpoints(self):
+        self.endpoints_total += 1
+        print(self.endpoints_total)
+        bar = ProgressBar(max_value=self.endpoints_total)
+
+        if self.defaults_url:
+            self.data['url'] = self.defaults_url
+            self._download_endpoint(self.data)
+
+        tasks = self._find_and_download_urls(self.data['subs'])
+        bar_range = iter(range(self.endpoints_total))
+
+        futures = []
+        with ThreadPoolExecutor(max_workers=None) as executor:
+            for task in tasks:
+                f = executor.submit(task)
+                f.add_done_callback(lambda _: bar.update(next(bar_range)))
+                futures.append(f)
+
+        bar.finish()
+
+    def _find_and_download_urls(self, data):
+        for key, value in data.items():
+            if 'url' in value:
+                yield partial(self._download_endpoint, value)
+
+            if 'subs' in value:
+                yield from self._find_and_download_urls(value['subs'])
+
+    def _download_endpoint(self, value):
+        json = self._get_json(self.base_url + value['url'])
+        value['details'] = json
+
+    def _parse_list(self):
+        for anchor in self.page.find_all('a'):
+            p = self._parse_list_anchor(anchor)
+            if p:
+                value = self.add_depth(p)
+                value['url'] = anchor['href']
+
+                self.endpoints_total += 1
+
+    def _parse_list_anchor(self, anchor):
+        if not anchor['href'].startswith(self.query):
+            return False
+
+        value = anchor['href'][len(self.query):]
+        return value.split('/')
+
+    def add_depth(self, keys):
+        depth = self.data
+        for key in keys:
+            depth = depth.setdefault('subs', {}).setdefault(key, {})
+        return depth
+
+    def run(self):
+        self._download_list()
+        self._parse_list()
+        self._download_endpoints()
+
+        return self.data
+
+    def print(self):
+        pprint(self.data)
+
+
+if __name__ == '__main__':
+    cache = None
+    if input('Generate or use cache? [Y/n] ').lower() in ['yes', 'y', '']:
+        loc = input('Cache location: [/tmp/uri-cache] ')
+        if loc == '':
+            loc = '/tmp/uri-cache'
+
+        cache = percache.Cache(loc)
+
+    d = Downloader('http://i18napis.appspot.com', '/address',
+                   '/address/data/', defaults='/address/data/ZZ', cache=cache)
+    data = d.run()
+    with open('data/export.json', 'w') as export:
+        json.dump(data, export)
+
+    if cache:
+        cache.close()
