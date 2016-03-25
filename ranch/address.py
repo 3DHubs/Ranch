@@ -64,6 +64,9 @@ class Address(object):
                 self.set_field(field, value)
 
     def field_in_fmt(self, part):
+        if part == AddressParts.country:
+            return True
+
         data = self.get_specs()
         return '%{0}'.format(part.value) in data['fmt']
 
@@ -94,22 +97,25 @@ class Address(object):
 
     def get_field_types(self):
         parts = []
+        # add the country now, since it's always the first field to fill in
         parts.append((AddressParts.country, tuple(self.defaults.subs)))
         data = self.get_specs()
 
         if 'fmt' not in data:
             return parts
 
+        # we want to sort field types by significance
         sig = AddressParts.significant()
         for depth, part in enumerate(sig):
             if part == AddressParts.country:
                 continue
 
-            options = None
-            relevant_part = sig[depth - 1]
-
+            # skip fields that aren't in this country's format string
             if not self.field_in_fmt(part):
                 continue
+
+            options = None
+            relevant_part = sig[depth - 1]
 
             if self.field_in_fmt(relevant_part):
                 if relevant_part not in self.fields:
