@@ -96,6 +96,7 @@ class Address(object):
         return specs
 
     def get_field_types(self):
+        """Gets a list of currently known-about fields."""
         parts = []
         # add the country now, since it's always the first field to fill in
         parts.append((AddressParts.country, tuple(self.defaults.subs)))
@@ -107,6 +108,7 @@ class Address(object):
         # we want to sort field types by significance
         sig = AddressParts.significant()
         for depth, part in enumerate(sig):
+            # already have this
             if part == AddressParts.country:
                 continue
 
@@ -114,10 +116,12 @@ class Address(object):
             if not self.field_in_fmt(part):
                 continue
 
+            # we want to know if the "parent field" has choices for this field
             options = None
             relevant_part = sig[depth - 1]
 
             if self.field_in_fmt(relevant_part):
+                # when it does, we can't show the rest of the fields yet
                 if relevant_part not in self.fields:
                     break
 
