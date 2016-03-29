@@ -10,13 +10,13 @@ entire process overwhelmingly [depressing][sadtopographies].
 ## In which addressing has never been done before
 Luckily, we're not the first people to have faced this problem.
 [Plenty][commerceguys] [of][i18n] [people][libpostal] have attempted to tackle
-the problem of addressing, and plenty have succeeded! So no, ranch isn't
+the problem of addressing, and plenty have succeeded! So no, Ranch isn't
 reinventing the wheel entirely. Instead, we're working with Google's excellent
 i18n dataset: downloading it, parsing it, outputting data.
 
 ## In which I have to do everything myself
 Ranch is built as an object to store your address data in. So instead of having
-you access a bunch of stuff and doing checks yourself, ranch allows you to
+you access a bunch of stuff and doing checks yourself, Ranch allows you to
 enter address field data and poll for whatever the next set of fields is to
 fill in.
 
