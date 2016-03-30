@@ -97,45 +97,47 @@ class Address(object):
 
     def get_field_types(self):
         """Gets a list of currently known-about fields."""
-        parts = []
+        fields = []
         # add the country now, since it's always the first field to fill in
-        parts.append((AddressParts.country, tuple(self.defaults.subs)))
+        fields.append((AddressParts.country, tuple(self.defaults.subs)))
         data = self.get_specs()
 
         if 'fmt' not in data:
-            return parts
+            return fields
 
-        # we want to sort field types by significance
-        sig = AddressParts.significant()
+        # we want only parts we have, by significance
+        sig = [part for part in AddressParts.significant()
+               if self.field_in_fmt(part)]
+
         for depth, part in enumerate(sig):
             # already have this
             if part == AddressParts.country:
                 continue
 
-            # skip fields that aren't in this country's format string
-            if not self.field_in_fmt(part):
-                continue
-
             # we want to know if the "parent field" has choices for this field
+            # because if it does, but no option is chosen yet, we can'ts how
+            # the other fields
             options = None
-            relevant_part = sig[depth - 1]
+            parent = depth - 1
+            parent_part = sig[parent]
 
-            if self.field_in_fmt(relevant_part):
-                # when it does, we can't show the rest of the fields yet
-                if relevant_part not in self.fields:
-                    break
+            if fields[parent][1] is not None and \
+               parent_part not in self.fields:
+                break
 
-                relevant = self.fields[relevant_part]
-                options = None
+            # otherwise, if it is filled in, we only need to see if it has
+            # options
+            elif parent_part in self.fields:
+                relevant = self.fields[parent_part]
                 if len(relevant.subs) > 0:
                     options = tuple(relevant.subs)
 
-            parts.append((part, options))
+            fields.append((part, options))
         else:
-            parts.append((AddressParts.postal_code, None))
-            parts.append((AddressParts.sorting_code, None))
+            fields.append((AddressParts.postal_code, None))
+            fields.append((AddressParts.sorting_code, None))
 
-        return parts
+        return fields
 
     def get_detail(self, field, prop):
         """

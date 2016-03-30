@@ -24,6 +24,21 @@ def test_get_field_types(AddressParts, address):
     assert len(field_types[AddressParts.admin_area]) == 26
 
 
+def test_field_types_no_more_options(AddressParts, address):
+    address.set_field(AddressParts.country, 'CA')
+    address.set_field(AddressParts.admin_area, 'NT')
+
+    field_types = dict(address.get_field_types())
+
+    assert AddressParts.city in field_types
+    assert AddressParts.street_address in field_types
+    assert AddressParts.organisation in field_types
+    assert AddressParts.name in field_types
+    assert AddressParts.postal_code in field_types
+
+    assert AddressParts.dependent_locality not in field_types
+
+
 def test_set_city(AddressParts, address_china):
     assert address_china.get_specs()["zipex"] == '750001'
 
