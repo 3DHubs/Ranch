@@ -6,7 +6,7 @@ long_description = pypandoc.convert('README.md', 'rst')
 
 setup(
     name='Ranch',
-    version='0.1.0',
+    version='0.1.1',
     description='Ranch does addressing in Python',
     long_description=long_description,
     author='Martijn Arts',
