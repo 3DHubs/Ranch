@@ -150,7 +150,7 @@ class Address(object):
             elif parent_part in self.fields:
                 relevant = self.fields[parent_part]
                 if len(relevant.subs) > 0:
-                    options = {key: value.get('name', key)
+                    options = {key: value['details'].get('name', key)
                                for key, value in relevant.subs.items()}
 
             if part == AddressParts.admin_area:
