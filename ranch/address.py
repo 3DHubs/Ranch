@@ -218,7 +218,9 @@ class Address(object):
             if relevant and (depth == 0 or 'sub_keys' in relevant.details):
                 if value not in relevant.subs:
                     raise InvalidAddressException(
-                        '{0} does not exist'.format(relevant_part.name))
+                        'Selected value for{0} does not exist'
+                        .format(field.name)
+                    )
 
                 chosen = relevant.subs[value]
 
