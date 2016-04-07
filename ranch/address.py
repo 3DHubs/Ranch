@@ -222,17 +222,25 @@ class Address(object):
 
                 chosen = relevant.subs[value]
 
+        if AddressParts.postal_code == field:
+            self.validate_postal_code(value)
+        elif AddressParts.postal_code in self.fields:
+            self.validate_postal_code()
+
+        if not self.validate_field(field, value):
+            raise InvalidAddressException(
+                '"{0}" is not a valid value for field "{1}"'.format(value,
+                                                                    field))
+
         self.fields[field] = FieldValue(
             value=value,
             details=chosen.get('details', {}),
             subs=chosen.get('subs', {})
         )
 
-        if AddressParts.postal_code in self.fields:
-            self.validate_postal_code()
-
-    def validate_postal_code(self):
-        postal_code = self.fields[AddressParts.postal_code].value
+    def validate_postal_code(self, postal_code=None):
+        if postal_code is None:
+            postal_code = self.fields[AddressParts.postal_code].value
 
         regex = self.get_detail(AddressParts.country, 'zip')
         if not re.fullmatch(regex, postal_code):
@@ -246,13 +254,18 @@ class Address(object):
             if not re.match(regex, postal_code):
                 raise InvalidAddressException('Invalid postal code')
 
+    def validate_field(self, field, value):
+        data = self.get_specs()
+
+        return field.value not in data['require'] or \
+            value is not None and value != ''
+
     def is_valid(self):
         data = self.get_specs()
 
-        for part in AddressParts.__members__.values():
-            if part not in self.fields and part.value in data['require']:
-                return False
-        return True
+        return len(self.fields) > len(data['require']) and \
+            all(self.validate_field(part, value.value)
+                for part, value in self.fields.items())
 
     def __str__(self):
         data = self.get_specs()
