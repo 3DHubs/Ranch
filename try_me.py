@@ -18,12 +18,12 @@ while not a.is_valid():
 
     if len(fields) > 1:
         for field in fields[:-1]:
-            if field[0] not in a.fields:
+            if field['key'] not in a.fields:
                 last_field = field
                 break
 
     try:
-        a.set_field(last_field[0], input(str(last_field[0]) + ': '))
+        a.set_field(last_field['key'], input(str(last_field['label']) + ': '))
     except InvalidAddressException as e:
         print('Error:', str(e))
 
