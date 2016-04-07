@@ -99,7 +99,12 @@ class Address(object):
         """Gets a list of currently known-about fields."""
         fields = []
         # add the country now, since it's always the first field to fill in
-        fields.append((AddressParts.country, tuple(self.defaults.subs)))
+        fields.append({
+            'key': AddressParts.country,
+            'label': 'Country',
+            'options': {key: value.get('name', key)
+                        for key, value in self.defaults.subs.items()},
+        })
         data = self.get_specs()
 
         if 'fmt' not in data:
@@ -121,7 +126,7 @@ class Address(object):
             parent = depth - 1
             parent_part = sig[parent]
 
-            if fields[parent][1] is not None and \
+            if fields[parent]['options'] is not None and \
                parent_part not in self.fields:
                 break
 
@@ -130,12 +135,33 @@ class Address(object):
             elif parent_part in self.fields:
                 relevant = self.fields[parent_part]
                 if len(relevant.subs) > 0:
-                    options = tuple(relevant.subs)
+                    options = {key: value.get('name', key)
+                               for key, value in relevant.subs.items()}
 
-            fields.append((part, options))
+            if part == AddressParts.admin_area:
+                label = 'province'
+            else:
+                label = part.name.replace('_', ' ')
+            label = relevant.details.get('state_name_type', label)
+
+            fields.append({
+                'key': part,
+                'label': label,
+                'options': options,
+            })
         else:
-            fields.append((AddressParts.postal_code, None))
-            fields.append((AddressParts.sorting_code, None))
+            if self.field_in_fmt(AddressParts.postal_code):
+                fields.append({
+                    'key': AddressParts.postal_code,
+                    'label': 'postal code',
+                    'options': None,
+                })
+            if self.field_in_fmt(AddressParts.sorting_code):
+                fields.append({
+                    'key': AddressParts.sorting_code,
+                    'label': 'sorting code',
+                    'options': None,
+                })
 
         return fields
 

@@ -14,21 +14,24 @@ def test_set_fields(AddressParts, address):
 def test_get_field_types(AddressParts, address):
     address.set_field(AddressParts.country, 'CA')
 
-    field_types = dict(address.get_field_types())
+    fields = address.get_field_types()
+    assert len(fields) == 2
 
-    assert len(field_types) == 2
-    assert AddressParts.country in dict(field_types)
-    assert AddressParts.admin_area in dict(field_types)
+    field_types = [field['key'] for field in fields]
+    assert AddressParts.country in field_types
+    assert AddressParts.admin_area in field_types
 
-    assert len(field_types[AddressParts.country]) == 4
-    assert len(field_types[AddressParts.admin_area]) == 26
+    assert len(fields[field_types.index(AddressParts.country)]['options']) == 4
+
+    admin_area = fields[field_types.index(AddressParts.admin_area)]
+    assert len(admin_area['options']) == 26
 
 
 def test_field_types_no_more_options(AddressParts, address):
     address.set_field(AddressParts.country, 'CA')
     address.set_field(AddressParts.admin_area, 'NT')
 
-    field_types = dict(address.get_field_types())
+    field_types = [field['key'] for field in address.get_field_types()]
 
     assert AddressParts.city in field_types
     assert AddressParts.street_address in field_types
