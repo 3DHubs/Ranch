@@ -218,8 +218,8 @@ class Address(object):
             if relevant and (depth == 0 or 'sub_keys' in relevant.details):
                 if value not in relevant.subs:
                     raise InvalidAddressException(
-                        'Selected value for{0} does not exist'
-                        .format(field.name)
+                        '"{0}" is not a valid value for field {1}'
+                        .format(value, field.name)
                     )
 
                 chosen = relevant.subs[value]
@@ -231,8 +231,9 @@ class Address(object):
 
         if not self.validate_field(field, value):
             raise InvalidAddressException(
-                '"{0}" is not a valid value for field "{1}"'.format(value,
-                                                                    field))
+                '"{0}" is not a valid value for field "{1}"'
+                .format(value, field)
+            )
 
         self.fields[field] = FieldValue(
             value=value,
