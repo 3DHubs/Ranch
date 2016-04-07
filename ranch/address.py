@@ -201,45 +201,63 @@ class Address(object):
     def set_field(self, field, value):
         chosen = {}
 
-        if not field.name.endswith('_code'):
-            sig = AddressParts.significant()
+        sig = AddressParts.significant()
+        try:
             depth = sig.index(field)
+        except ValueError:
+            depth = -1
 
-            if depth == 0:
-                relevant_part = sig[0]
-                relevant = self.defaults
+        if depth == 0:
+            relevant_part = sig[0]
+            relevant = self.defaults
+        elif depth > 0:
+            relevant_part = sig[depth - 1]
+            if relevant_part not in self.fields:
+                relevant = False
             else:
-                relevant_part = sig[depth - 1]
-                if relevant_part not in self.fields:
-                    relevant = False
-                else:
-                    relevant = self.fields[relevant_part]
+                relevant = self.fields[relevant_part]
 
-            if relevant and (depth == 0 or 'sub_keys' in relevant.details):
-                if value not in relevant.subs:
-                    raise InvalidAddressException(
-                        '"{0}" is not a valid value for field {1}'
-                        .format(value, field.name)
-                    )
+        if depth > -1 and relevant and \
+           (depth == 0 or 'sub_keys' in relevant.details):
+            if value not in relevant.subs:
+                raise InvalidAddressException(
+                    '"{0}" is not a valid value for field {1}'
+                    .format(value, field.name)
+                )
 
-                chosen = relevant.subs[value]
-
-        if AddressParts.postal_code == field:
-            self.validate_postal_code(value)
-        elif AddressParts.postal_code in self.fields:
-            self.validate_postal_code()
+            chosen = relevant.subs[value]
 
         if not self.validate_field(field, value):
             raise InvalidAddressException(
                 '"{0}" is not a valid value for field "{1}"'
                 .format(value, field)
             )
+        if AddressParts.postal_code == field:
+            self.validate_postal_code(value)
 
-        self.fields[field] = FieldValue(
+        fv = FieldValue(
             value=value,
             details=chosen.get('details', {}),
             subs=chosen.get('subs', {})
         )
+
+        self.fields[field] = fv
+
+        # Clear out all fields below this one if it has options
+        if len(fv.subs) > 0 and depth > -1:
+            members = [AddressParts.country]
+            members += list(AddressParts.__members__.values())
+
+            new_fields = {}
+            index = members.index(field)
+            for f in self.fields:
+                if members.index(f) <= index:
+                    new_fields[f] = self.fields[f]
+
+            self.fields = new_fields
+
+        if AddressParts.postal_code in self.fields:
+            self.validate_postal_code()
 
     def validate_postal_code(self, postal_code=None):
         if postal_code is None:

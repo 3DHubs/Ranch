@@ -42,6 +42,16 @@ def test_field_types_no_more_options(AddressParts, address):
     assert AddressParts.dependent_locality not in field_types
 
 
+def test_field_types_take_backsies(AddressParts, address):
+    address.set_field(AddressParts.country, 'CA')
+    address.set_field(AddressParts.admin_area, 'NT')
+
+    address.set_field(AddressParts.country, 'CN')
+
+    field_types = [field['key'] for field in address.get_field_types()]
+    assert AddressParts.city not in field_types
+
+
 def test_field_types_order(AddressParts, address):
     address.set_field(AddressParts.country, 'CA')
     address.set_field(AddressParts.admin_area, 'NT')
