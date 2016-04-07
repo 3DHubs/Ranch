@@ -116,7 +116,7 @@ class Address(object):
         # add the country now, since it's always the first field to fill in
         fields.append({
             'key': AddressParts.country,
-            'label': 'Country',
+            'label': 'country',
             'options': {key: value.get('name', key)
                         for key, value in self.defaults.subs.items()},
         })
