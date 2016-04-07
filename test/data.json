@@ -1,17 +1,15 @@
 {
   "details": {
-    "details": {
-      "locality_name_type": "city",
-      "fmt": "%N%n%O%n%A%n%C",
-      "sublocality_name_type": "suburb",
-      "require": "AC",
-      "id": "data/ZZ",
-      "upper": "C",
-      "state_name_type": "province",
-      "zip_name_type": "postal"
-    },
-    "url": "/address/data/ZZ"
+    "locality_name_type": "city",
+    "fmt": "%N%n%O%n%A%n%C",
+    "sublocality_name_type": "suburb",
+    "require": "AC",
+    "id": "data/ZZ",
+    "upper": "C",
+    "state_name_type": "province",
+    "zip_name_type": "postal"
   },
+  "url": "/address/data/ZZ",
   "subs": {
     "NL": {
       "details": {
