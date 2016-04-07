@@ -70,6 +70,21 @@ class Address(object):
         data = self.get_specs()
         return '%{0}'.format(part.value) in data['fmt']
 
+    def index_in_fmt(self, query_part):
+        fmt = self.get_specs()['fmt']
+
+        fmt_fields = []
+        for substr in fmt.split('%')[1:]:
+            c = substr[0]
+            for part in AddressParts:
+                if part.value == c:
+                    fmt_fields.append(part)
+                    break
+
+        fmt_fields.append(AddressParts.country)
+
+        return fmt_fields.index(query_part)
+
     def get_significant_fields(self):
         """
         Get a list of (key, value) objects of fields sorted by
@@ -163,7 +178,17 @@ class Address(object):
                     'options': None,
                 })
 
-        return fields
+        # Sort the fields so that all fields with choices end up at the top,
+        # and the other fields are sorted by their position in the output
+        # format.
+        sort = sorted(
+            fields,
+            key=lambda f: (-len(fields) + fields.index(f)
+                           if f['options'] is not None
+                           else self.index_in_fmt(f['key']))
+        )
+
+        return sort
 
     def get_detail(self, field, prop):
         """
