@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 from setuptools import setup
 
-import pypandoc
-long_description = pypandoc.convert('README.md', 'rst')
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except ImportError:
+    long_description = 'Ranch does addressing in Python'
 
 setup(
     name='Ranch',
-    version='0.1.2',
+    version='0.1.3',
     description='Ranch does addressing in Python',
     long_description=long_description,
     author='Martijn Arts',
