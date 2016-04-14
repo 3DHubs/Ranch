@@ -255,20 +255,21 @@ class Address(object):
             subs=chosen.get('subs', {})
         )
 
-        self.fields[field] = fv
-
-        # Clear out all fields below this one if it has options
-        if len(fv.subs) > 0 and depth > -1:
-            members = [AddressParts.country]
-            members += list(AddressParts.__members__.values())
+        # Clear out all fields below this one if the old value had options
+        if field in self.fields and len(self.fields[field].subs) > 0 and \
+           depth > -1:
+            parts = AddressParts.significant()
+            parts += filter(lambda p: p.name.endswith('_code'), AddressParts)
 
             new_fields = {}
-            index = members.index(field)
+            index = parts.index(field)
             for f in self.fields:
-                if members.index(f) <= index:
+                if parts.index(f) <= index:
                     new_fields[f] = self.fields[f]
 
             self.fields = new_fields
+
+        self.fields[field] = fv
 
         if AddressParts.postal_code in self.fields:
             if not self.validate_postal_code():
