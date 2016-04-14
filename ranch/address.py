@@ -125,7 +125,7 @@ class Address(object):
         fields.append({
             'key': AddressParts.country,
             'label': 'country',
-            'options': {key: value.get('name', key)
+            'options': {key: value['details'].get('name', key)
                         for key, value in self.defaults.subs.items()},
         })
         data = self.get_specs()
