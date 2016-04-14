@@ -170,23 +170,23 @@ class Address(object):
 
             fields.append({
                 'key': part,
-                'required': part.value in data['required'],
+                'required': part.value in data['require'],
                 'label': label,
                 'options': options,
             })
         else:
-            required = data['required']
+            require = data['require']
             if self.field_in_fmt(AddressParts.postal_code):
                 fields.append({
                     'key': AddressParts.postal_code,
-                    'required': AddressParts.postal_codevalue in required,
+                    'required': AddressParts.postal_code.value in require,
                     'label': 'postal code',
                     'options': None,
                 })
             if self.field_in_fmt(AddressParts.sorting_code):
                 fields.append({
                     'key': AddressParts.sorting_code,
-                    'required': AddressParts.sorting_code.value in required,
+                    'required': AddressParts.sorting_code.value in require,
                     'label': 'sorting code',
                     'options': None,
                 })
@@ -305,7 +305,7 @@ class Address(object):
         data = self.get_specs()
 
         set_fields = ''.join(f.value for f in self.fields)
-        fields_required = [r in set_fields for r in data['required']]
+        fields_required = [r in set_fields for r in data['require']]
 
         fields_valid = [self.validate_field(part, value.value)
                         for part, value in self.fields.items()]
