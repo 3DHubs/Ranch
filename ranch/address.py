@@ -60,7 +60,15 @@ class Address(object):
 
         self.fields = {}
         if values is not None:
-            for field, value in values.items():
+            values_sorted = sorted(
+                filter(lambda f: not f[0].name.endswith('_code'),
+                       values.items()),
+                key=lambda i: AddressParts.significant().index(i[0])
+            )
+            values_sorted += filter(lambda f: f[0].name.endswith('_code'),
+                                    values.items())
+
+            for field, value in values_sorted:
                 self.set_field(field, value)
 
     def field_in_fmt(self, part):

@@ -5,6 +5,20 @@ def test_address_initialises(address):
     assert(address.specs != {})
 
 
+def test_initialisation_order(ranch, address_data, AddressParts):
+    values = {
+        AddressParts.country: 'CA',
+        AddressParts.admin_area: 'NT',
+        AddressParts.name: "Foobar",
+        AddressParts.city: "Cityplace",
+        AddressParts.street_address: "123 Street Rd",
+        AddressParts.postal_code: "X0E 2Y7",
+    }
+    a = ranch.Address(address_data, values=values)
+    assert len(a.fields) > 0
+    assert all(k in a.fields for k in values)
+
+
 def test_set_fields(AddressParts, address):
     address.set_field(AddressParts.country, 'CA')
     address.set_field(AddressParts.admin_area, 'AB')

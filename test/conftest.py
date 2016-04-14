@@ -14,10 +14,14 @@ def AddressParts():
 
 
 @pytest.fixture
-def address():
+def address_data():
     with open('test/data.json', 'r') as js:
-        data = json.load(js)
-    return addressing.Address(data)
+        return json.load(js)
+
+
+@pytest.fixture
+def address(address_data):
+    return addressing.Address(address_data)
 
 
 @pytest.fixture
