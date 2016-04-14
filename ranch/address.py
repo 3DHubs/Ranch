@@ -299,12 +299,14 @@ class Address(object):
     def is_valid(self):
         data = self.get_specs()
 
-        required_fields = len(self.fields) > len(data['require'])
+        set_fields = ''.join(f.value for f in self.fields)
+        fields_required = [r in set_fields for r in data['required']]
+
         fields_valid = [self.validate_field(part, value.value)
                         for part, value in self.fields.items()]
         code_valid = self.validate_postal_code()
 
-        return required_fields and all(fields_valid) and code_valid
+        return all(fields_required) and all(fields_valid) and code_valid
 
     def __str__(self):
         data = self.get_specs()
