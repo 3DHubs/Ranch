@@ -9,7 +9,7 @@ except ImportError:
 
 setup(
     name='Ranch',
-    version='0.2.5',
+    version='0.2.6',
     description='Ranch does addressing in Python',
     long_description=long_description,
     author='Martijn Arts',
