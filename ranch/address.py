@@ -125,6 +125,7 @@ class Address(object):
         fields.append({
             'key': AddressParts.country,
             'label': 'country',
+            'required': True,
             'options': {key: value['details'].get('name', key)
                         for key, value in self.defaults.subs.items()},
         })
@@ -169,19 +170,23 @@ class Address(object):
 
             fields.append({
                 'key': part,
+                'required': part.value in data['required'],
                 'label': label,
                 'options': options,
             })
         else:
+            required = data['required']
             if self.field_in_fmt(AddressParts.postal_code):
                 fields.append({
                     'key': AddressParts.postal_code,
+                    'required': AddressParts.postal_codevalue in required,
                     'label': 'postal code',
                     'options': None,
                 })
             if self.field_in_fmt(AddressParts.sorting_code):
                 fields.append({
                     'key': AddressParts.sorting_code,
+                    'required': AddressParts.sorting_code.value in required,
                     'label': 'sorting code',
                     'options': None,
                 })
