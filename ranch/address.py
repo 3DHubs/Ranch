@@ -233,7 +233,8 @@ class Address(object):
                 .format(value, field)
             )
         if AddressParts.postal_code == field:
-            self.validate_postal_code(value)
+            if not self.validate_postal_code(value):
+                raise InvalidAddressException('Invalid postal code')
 
         fv = FieldValue(
             value=value,
@@ -257,15 +258,19 @@ class Address(object):
             self.fields = new_fields
 
         if AddressParts.postal_code in self.fields:
-            self.validate_postal_code()
+            if not self.validate_postal_code():
+                raise InvalidAddressException('Invalid postal code')
 
     def validate_postal_code(self, postal_code=None):
         if postal_code is None:
+            if AddressParts.postal_code not in self.fields:
+                return False
+
             postal_code = self.fields[AddressParts.postal_code].value
 
         regex = self.get_detail(AddressParts.country, 'zip')
         if not re.fullmatch(regex, postal_code):
-            raise InvalidAddressException('Invalid postal code')
+            return False
 
         for value in self.fields.values():
             if 'zip' not in value.details:
@@ -273,7 +278,9 @@ class Address(object):
 
             regex = value.details['zip']
             if not re.match(regex, postal_code):
-                raise InvalidAddressException('Invalid postal code')
+                return False
+
+        return True
 
     def validate_field(self, field, value):
         data = self.get_specs()
@@ -284,9 +291,12 @@ class Address(object):
     def is_valid(self):
         data = self.get_specs()
 
-        return len(self.fields) > len(data['require']) and \
-            all(self.validate_field(part, value.value)
-                for part, value in self.fields.items())
+        required_fields = len(self.fields) > len(data['require'])
+        fields_valid = [self.validate_field(part, value.value)
+                        for part, value in self.fields.items()]
+        code_valid = self.validate_postal_code()
+
+        return required_fields and all(fields_valid) and code_valid
 
     def __str__(self):
         data = self.get_specs()
