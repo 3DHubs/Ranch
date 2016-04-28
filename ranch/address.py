@@ -127,7 +127,8 @@ class Address(object):
             'label': 'country',
             'required': True,
             'options': {key: value['details'].get('name', key)
-                        for key, value in self.defaults.subs.items()},
+                        for key, value in self.defaults.subs.items()
+                        if '--' not in key},
         })
         data = self.get_specs()
 
@@ -160,7 +161,8 @@ class Address(object):
                 relevant = self.fields[parent_part]
                 if len(relevant.subs) > 0:
                     options = {key: value['details'].get('name', key)
-                               for key, value in relevant.subs.items()}
+                               for key, value in relevant.subs.items()
+                               if '--' not in key}
 
             if part == AddressParts.admin_area:
                 label = relevant.details.get('state_name_type', 'province')

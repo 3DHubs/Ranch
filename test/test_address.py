@@ -38,7 +38,7 @@ def test_get_field_types(AddressParts, address):
     assert len(fields[field_types.index(AddressParts.country)]['options']) == 5
 
     admin_area = fields[field_types.index(AddressParts.admin_area)]
-    assert len(admin_area['options']) == 26
+    assert len(admin_area['options']) == 13
 
 
 def test_get_field_labels_repetitive(AddressParts, address):
