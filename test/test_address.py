@@ -35,10 +35,21 @@ def test_get_field_types(AddressParts, address):
     assert AddressParts.country in field_types
     assert AddressParts.admin_area in field_types
 
-    assert len(fields[field_types.index(AddressParts.country)]['options']) == 4
+    assert len(fields[field_types.index(AddressParts.country)]['options']) == 5
 
     admin_area = fields[field_types.index(AddressParts.admin_area)]
     assert len(admin_area['options']) == 26
+
+
+def test_get_field_labels_repetitive(AddressParts, address):
+    address.set_field(AddressParts.country, 'GB')
+
+    fields = address.get_field_types()
+
+    field_types = [field['label'] for field in fields]
+
+    assert field_types == ['country', 'name', 'organisation', 'street address',
+                           'city', 'county', 'postal code']
 
 
 def test_field_types_no_more_options(AddressParts, address):

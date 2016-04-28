@@ -163,10 +163,9 @@ class Address(object):
                                for key, value in relevant.subs.items()}
 
             if part == AddressParts.admin_area:
-                label = 'province'
+                label = relevant.details.get('state_name_type', 'province')
             else:
                 label = part.name.replace('_', ' ')
-            label = relevant.details.get('state_name_type', label)
 
             fields.append({
                 'key': part,
