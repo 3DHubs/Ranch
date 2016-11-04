@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from setuptools import setup
+from ranch.address import _get_latest_export
 
 try:
     import pypandoc
@@ -17,6 +18,7 @@ setup(
     url="https://github.com/3DHubs/ranch",
     packages=['ranch'],
     scripts=['scripts/ranch-download'],
+    data_files=[('data', [_get_latest_export()])],
     install_requires=['beautifulsoup4', 'flake8', 'requests', 'progressbar2',
                       'percache'],
     classifiers=[

@@ -1,15 +1,6 @@
-import json
 from ranch import Address, InvalidAddressException
 
-
-filename = input('Read data from: [data/export.json] ')
-if filename == '':
-    filename = 'data/export.json'
-
-with open(filename, 'r') as data:
-    specs = json.load(data)
-    a = Address(specs)
-
+a = Address()
 
 while not a.is_valid():
     fields = a.get_field_types()
