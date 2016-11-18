@@ -8,6 +8,8 @@
 <form class="js-form">
 </form>
 
+<p class="js-errors"></p>
+
 <template id="js-text-field">
   <div>
     <label></label>:
@@ -31,6 +33,7 @@
 const form = document.querySelector('.js-form');
 const textField = document.querySelector('#js-text-field');
 const choicesField = document.querySelector('#js-choices-field');
+const errors = document.querySelector('.js-errors');
 
 function submitData() {
   let elements = Array.from(form.elements);
@@ -52,7 +55,14 @@ function submitData() {
     body: JSON.stringify(data),
     headers: new Headers({ 'Content-Type': 'application/json' }),
   })
-    .then(parseFieldsResponse);
+    .then(response => response.status < 400 ? response : Promise.reject(response))
+    .then(parseFieldsResponse)
+    .catch(response => {
+      response.json()
+        .then(error => {
+          errors.innerText = error.message;
+        });
+    });
 }
 
 function createChoicesField(options) {
@@ -67,6 +77,8 @@ function createChoicesField(options) {
 }
 
 function parseFieldsResponse(response) {
+  errors.innerText = '';
+
   response.json()
     .then(fields => {
       const changed = false;

@@ -1,33 +1,6 @@
-import os
 import re
-import datetime
-import json
+from .specs import _get_default_specs
 from enum import Enum
-from iso8601utils.parsers import datetime as iso8601
-
-
-def _get_latest_export():
-    ranch_dir = os.path.dirname(os.path.split(__file__)[0])
-    data_dir = os.path.join(ranch_dir, 'data')
-
-    latest_file = ''
-    latest_time = datetime.datetime(1970, 1, 1)
-    for item in os.listdir(data_dir):
-        if not item.startswith('address-export.'):
-            continue
-
-        time = iso8601(os.path.splitext(item)[0][len('address-export.'):])
-        if time > latest_time:
-            latest_time = time
-            latest_file = item
-
-    return os.path.join(data_dir, latest_file)
-
-
-def _get_default_specs():
-    with open(_get_latest_export(), 'r') as data:
-        specs = json.load(data)
-    return specs
 
 
 class AddressParts(Enum):
@@ -55,6 +28,10 @@ class AddressParts(Enum):
         reverse = reversed(list(ordered_values))
         return list(filter(lambda p: not p.name.endswith('_code'), reverse))
 
+    @classmethod
+    def from_string(cls, s):
+        return cls.__members__[s]
+
 
 class InvalidAddressException(ValueError):
     pass
@@ -65,6 +42,14 @@ class FieldValue(object):
         self.value = value
         self.details = details
         self.subs = subs
+
+
+class FieldType(object):
+    def __init__(self, key, label, required, options=None):
+        self.key = key
+        self.label = label
+        self.required = required
+        self.options = options
 
 
 class Address(object):
@@ -150,14 +135,16 @@ class Address(object):
         """Gets a list of currently known-about fields."""
         fields = []
         # add the country now, since it's always the first field to fill in
-        fields.append({
-            'key': AddressParts.country,
-            'label': 'country',
-            'required': True,
-            'options': {key: value['details'].get('name', key)
-                        for key, value in self.defaults.subs.items()
-                        if '--' not in key},
-        })
+        fields.append(FieldType(
+            key=AddressParts.country,
+            label='country',
+            required=True,
+            options={
+                key: value['details'].get('name', key)
+                for key, value in self.defaults.subs.items()
+                if '--' not in key
+            }
+        ))
         data = self.get_specs()
 
         if 'fmt' not in data:
@@ -179,7 +166,7 @@ class Address(object):
             parent = depth - 1
             parent_part = sig[parent]
 
-            if fields[parent]['options'] is not None and \
+            if fields[parent].options is not None and \
                parent_part not in self.fields:
                 break
 
@@ -197,28 +184,28 @@ class Address(object):
             else:
                 label = part.name.replace('_', ' ')
 
-            fields.append({
-                'key': part,
-                'required': part.value in data['require'],
-                'label': label,
-                'options': options,
-            })
+            fields.append(FieldType(
+                key=part,
+                required=part.value in data['require'],
+                label=label,
+                options=options
+            ))
         else:
             require = data['require']
             if self.field_in_fmt(AddressParts.postal_code):
-                fields.append({
-                    'key': AddressParts.postal_code,
-                    'required': AddressParts.postal_code.value in require,
-                    'label': 'postal code',
-                    'options': None,
-                })
+                fields.append(FieldType(
+                    key=AddressParts.postal_code,
+                    required=AddressParts.postal_code.value in require,
+                    label='postal code',
+                    options=None
+                ))
             if self.field_in_fmt(AddressParts.sorting_code):
-                fields.append({
-                    'key': AddressParts.sorting_code,
-                    'required': AddressParts.sorting_code.value in require,
-                    'label': 'sorting code',
-                    'options': None,
-                })
+                fields.append(FieldType(
+                    key=AddressParts.sorting_code,
+                    required=AddressParts.sorting_code.value in require,
+                    label='sorting code',
+                    options=None,
+                ))
 
         # Sort the fields so that all fields with choices end up at the top,
         # and the other fields are sorted by their position in the output
@@ -226,8 +213,8 @@ class Address(object):
         sort = sorted(
             fields,
             key=lambda f: (-len(fields) + fields.index(f)
-                           if f['options'] is not None
-                           else self.index_in_fmt(f['key']))
+                           if f.options is not None
+                           else self.index_in_fmt(f.key))
         )
 
         return sort
@@ -241,6 +228,14 @@ class Address(object):
         return details.get(prop, self.defaults.details.get(prop, None))
 
     def set_field(self, field, value):
+        if isinstance(field, str):
+            try:
+                field = AddressParts.from_string(field)
+            except KeyError:
+                raise KeyError(
+                    '{} is not a valid address part'.format(field)
+                )
+
         chosen = {}
 
         sig = AddressParts.significant()
