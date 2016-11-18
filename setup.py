@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from setuptools import setup
-from ranch.address import _get_latest_export
+from ranch.specs import _get_latest_export
 
 try:
     import pypandoc
