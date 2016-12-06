@@ -123,7 +123,7 @@ if __name__ == '__main__':
     data = d.run()
 
     default_filename = 'data/address-export.{}.json'.format(
-        datetime.datetime.now().isoformat()
+        datetime.datetime.now().timestamp()
     )
 
     filename = input('Where to store? [{}] '.format(default_filename))

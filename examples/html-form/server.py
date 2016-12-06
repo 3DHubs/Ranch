@@ -1,13 +1,16 @@
 from flask import Flask, request, Response
 from ranch import Address, AddressParts, InvalidAddressException
 from ranch.json import JSONEncoder
+import os
 
-PORT = 8000
-
+ON_HEROKU = os.environ.get('ON_HEROKU')
+if ON_HEROKU:
+    PORT = int(os.environ.get('PORT'))
+else:
+    PORT = 3000
 
 app = Flask(__name__)
 json = JSONEncoder()
-
 
 @app.route('/address', methods=['GET', 'POST'])
 def address():
@@ -39,12 +42,10 @@ def address():
 
     return Response(data, mimetype='application/json')
 
-
 @app.route('/')
 def index():
     with open('index.html', 'r') as index_f:
         return index_f.read()
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=PORT)
