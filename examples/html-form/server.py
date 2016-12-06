@@ -44,7 +44,7 @@ def address():
 
 @app.route('/')
 def index():
-    with open('index.html', 'r') as index_f:
+    with open(os.path.join(os.path.split(os.path.abspath(__file__))[0], 'index.html'), 'r') as index_f:
         return index_f.read()
 
 if __name__ == '__main__':
