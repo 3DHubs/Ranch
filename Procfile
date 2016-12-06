@@ -1,1 +1,1 @@
-web: python server.py
+web: python examples/html-form\server.py

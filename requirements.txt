@@ -1,14 +1,12 @@
-beautifulsoup4==4.4.1
-bs4
+bs4==4.5.1
 flake8==2.5.4
 mccabe==0.4.0
 pep8==1.7.0
 progressbar2==3.6.2
 py==1.4.31
-pyflakes==1.0.0
+pyflakes==1.3.0
 pytest==2.9.1
 requests==2.9.1
-iso8601utils
 Flask
 gunicorn
-percache
+percache==0.3.0
