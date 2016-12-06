@@ -1,7 +1,11 @@
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
+
 from flask import Flask, request, Response
 from ranch import Address, AddressParts, InvalidAddressException
 from ranch.json import JSONEncoder
-import os
 
 ON_HEROKU = os.environ.get('ON_HEROKU')
 if ON_HEROKU:
