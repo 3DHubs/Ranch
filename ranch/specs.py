@@ -1,7 +1,7 @@
 import os
 import json
 import datetime
-from iso8601utils.parsers import datetime as iso8601
+import dateutil.parser
 
 
 def _get_latest_export():
@@ -14,7 +14,8 @@ def _get_latest_export():
         if not item.startswith('address-export.'):
             continue
 
-        time = iso8601(os.path.splitext(item)[0][len('address-export.'):])
+        time_str = os.path.splitext(item)[0][len('address-export.'):]
+        time = dateutil.parser.parse(time_str)
         if time > latest_time:
             latest_time = time
             latest_file = item
