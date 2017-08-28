@@ -2,25 +2,33 @@ import os
 import json
 import datetime
 import dateutil.parser
+import sys
 
 
 def _get_latest_export():
     ranch_dir = os.path.dirname(os.path.split(__file__)[0])
-    data_dir = os.path.join(ranch_dir, 'data')
+    data_dirs = [
+        os.path.join(sys.prefix, 'data'),
+        os.path.join(ranch_dir, 'data'),
+    ]
 
     latest_file = ''
     latest_time = datetime.datetime(1970, 1, 1)
-    for item in os.listdir(data_dir):
-        if not item.startswith('address-export.'):
+    for data_dir in data_dirs:
+        if not os.path.isdir(data_dir):
             continue
 
-        time_str = os.path.splitext(item)[0][len('address-export.'):]
-        time = dateutil.parser.parse(time_str)
-        if time > latest_time:
-            latest_time = time
-            latest_file = item
+        for item in os.listdir(data_dir):
+            if not item.startswith('address-export.'):
+                continue
 
-    return os.path.join(data_dir, latest_file)
+            time_str = os.path.splitext(item)[0][len('address-export.'):]
+            time = dateutil.parser.parse(time_str)
+            if time > latest_time:
+                latest_time = time
+                latest_file = os.path.join(data_dir, item)
+
+    return latest_file
 
 
 def _get_default_specs():
