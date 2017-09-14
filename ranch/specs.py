@@ -38,7 +38,12 @@ class NoSpecsFileError(Exception):
         self.searched_dirs = {data_dir: os.listdir(data_dir)
                               for data_dir in _get_export_dirs()}
 
-        message = ['Could not find specs file. Looked in:']
+        message = ['Could not find specs file.']
+        if len(self.searched_dirs) == 0:
+            message = ['No data directories found.']
+        else:
+            message.append('Searched in following directories:')
+
         for data_dir, items in self.searched_dirs.items():
             message.append('- {}/'.format(data_dir))
             for n, item in enumerate(items):
