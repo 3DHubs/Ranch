@@ -20,7 +20,7 @@ setup(
     scripts=['scripts/ranch-download'],
     data_files=[('data', [_get_latest_export()])],
     install_requires=['beautifulsoup4', 'flake8', 'requests', 'progressbar2',
-                      'percache', 'python-dateutil'],
+                      'percache'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: Apache Software License',

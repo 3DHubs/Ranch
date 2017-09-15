@@ -17,3 +17,14 @@ def test_no_specs_error():
     assert 'foodir/' in s
     assert 'foo' in s
     assert 'bar/' in s
+
+
+def test_convert_export_filename():
+    time = specs._convert_export_filename('2017-02-09T23:08:49.933246')
+    assert time.year == 2017
+    assert time.month == 2
+    assert time.day == 9
+    assert time.hour == 23
+    assert time.minute == 8
+    assert time.second == 49
+    assert time.microsecond == 933246

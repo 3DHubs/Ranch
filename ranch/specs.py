@@ -1,8 +1,12 @@
-import os
-import json
 import datetime
-import dateutil.parser
+import json
+import os
+import re
 import sys
+
+TIME_RE = re.compile(r'^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})'
+                     r'T(?P<hour>\d{2}):(?P<minute>\d{2}):(?P<second>\d{2})'
+                     r'.(?P<microsecond>\d*)')
 
 
 def _get_export_dirs():
@@ -16,6 +20,12 @@ def _get_export_dirs():
             yield data_dir
 
 
+def _convert_export_filename(time_str):
+    match = TIME_RE.match(time_str)
+    return datetime.datetime(**{k: int(v)
+                                for k, v in match.groupdict().items()})
+
+
 def _get_latest_export():
     latest_file = ''
     latest_time = datetime.datetime(1970, 1, 1)
@@ -25,7 +35,7 @@ def _get_latest_export():
                 continue
 
             time_str = os.path.splitext(item)[0][len('address-export.'):]
-            time = dateutil.parser.parse(time_str)
+            time = _convert_export_filename(time_str)
             if time > latest_time:
                 latest_time = time
                 latest_file = os.path.join(data_dir, item)
