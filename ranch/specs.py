@@ -2,7 +2,7 @@ import datetime
 import json
 import os
 import re
-import sys
+import pkg_resources
 
 TIME_RE = re.compile(r'^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})'
                      r'T(?P<hour>\d{2}):(?P<minute>\d{2}):(?P<second>\d{2})'
@@ -10,10 +10,8 @@ TIME_RE = re.compile(r'^(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})'
 
 
 def _get_export_dirs():
-    ranch_dir = os.path.dirname(os.path.split(__file__)[0])
     data_dirs = [
-        os.path.join(sys.prefix, 'data'),
-        os.path.join(ranch_dir, 'data'),
+        pkg_resources.resource_filename('ranch', 'exports')
     ]
     for data_dir in data_dirs:
         if os.path.isdir(data_dir):
