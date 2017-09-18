@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 from setuptools import setup
 from ranch.specs import _get_latest_export
 
@@ -10,15 +11,16 @@ except ImportError:
 
 setup(
     name='Ranch',
-    version='1.0.2',
+    version='1.0.3',
     description='Ranch does addressing in Python',
     long_description=long_description,
     author='Martijn Arts',
     author_email='martijn@3dhubs.com',
     url="https://github.com/3DHubs/ranch",
     packages=['ranch'],
+    package_dir={'ranch': 'data'},
+    package_data={'ranch': [_get_latest_export()]},
     scripts=['scripts/ranch-download'],
-    data_files=[('data', [_get_latest_export()])],
     install_requires=['beautifulsoup4', 'flake8', 'requests', 'progressbar2',
                       'percache'],
     classifiers=[

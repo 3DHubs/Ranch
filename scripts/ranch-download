@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
+import os
 import datetime
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial
 from pprint import pprint
+import pkg_resources
 import json
 
 from bs4 import BeautifulSoup
@@ -122,8 +124,9 @@ if __name__ == '__main__':
                    '/address/data/', defaults='/address/data/ZZ', cache=cache)
     data = d.run()
 
-    default_filename = 'data/address-export.{}.json'.format(
-        datetime.datetime.now().isoformat()
+    default_filename = os.path.join(
+        pkg_resources.resource_filename('ranch', 'exports'),
+        'address-export.{}.json'.format(datetime.datetime.now().isoformat())
     )
 
     filename = input('Where to store? [{}] '.format(default_filename))
