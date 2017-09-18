@@ -18,7 +18,7 @@ setup(
     author_email='martijn@3dhubs.com',
     url="https://github.com/3DHubs/ranch",
     packages=['ranch'],
-    package_dir={'ranch': 'data'},
+    package_dir={'ranch': 'ranch'},
     package_data={'ranch': [_get_latest_export()]},
     scripts=['scripts/ranch-download'],
     install_requires=['beautifulsoup4', 'flake8', 'requests', 'progressbar2',
