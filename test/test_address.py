@@ -125,3 +125,9 @@ def test_stringify(address_canada):
         'SOMEPLACE NT X0E 2Y7',
         'CANADA',
     ))
+
+
+def test_isoid(ranch):
+    address = ranch.Address()
+    address.set_field('country', 'PH')
+    address.set_field('admin_area', 'CEB')

@@ -27,7 +27,7 @@ def address(address_data):
 @pytest.fixture
 def address_china(AddressParts, address):
     address.set_field(AddressParts.country, 'CN')
-    address.set_field(AddressParts.admin_area, '宁夏回族自治区')
+    address.set_field(AddressParts.admin_area, '64')
     address.set_field(AddressParts.city, '银川市')
     address.set_field(AddressParts.dependent_locality, '兴庆区')
 

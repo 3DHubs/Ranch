@@ -41,7 +41,8 @@ class FieldValue(object):
     def __init__(self, value, details, subs):
         self.value = value
         self.details = details
-        self.subs = subs
+        self.subs = {value['details'].get('isoid', key): value
+                     for key, value in subs.items()}
 
 
 class FieldType(object):
