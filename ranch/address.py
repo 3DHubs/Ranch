@@ -359,7 +359,7 @@ class Address(object):
                 continue
 
             # possibly needs to be uppercase too
-            val = self.fields[part].value
+            val = self.fields[part].details.get('key', self.fields[part].value)
             if part.value in data['upper']:
                 val = val.upper()
 

@@ -130,4 +130,13 @@ def test_stringify(address_canada):
 def test_isoid(ranch):
     address = ranch.Address()
     address.set_field('country', 'PH')
+    # Test adding admin_area by ISO ID.
     address.set_field('admin_area', 'CEB')
+
+    address.set_field('city', 'Cebu City')
+    address.set_field('dependent_locality', 'Mabolo')
+    address.set_field('postal_code', '6000')
+    address.set_field('street_address', '2642 Gochan street\nUnit 2 Grandville')
+
+    # Test showing admin_area by key.
+    assert '6000 Cebu' in str(address)
