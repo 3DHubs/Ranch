@@ -175,9 +175,11 @@ class Address(object):
             elif parent_part in self.fields:
                 relevant = self.fields[parent_part]
                 if len(relevant.subs) > 0:
-                    options = {key: value['details'].get('name', key)
-                               for key, value in relevant.subs.items()
-                               if '--' not in key}
+                    options = {
+                        value['details'].get('isoid', key):
+                        value['details'].get('name', key)
+                        for key, value in relevant.subs.items()
+                        if '--' not in key}
 
             if part == AddressParts.admin_area:
                 label = relevant.details.get('state_name_type', 'province')
